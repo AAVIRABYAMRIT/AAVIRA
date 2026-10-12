@@ -1,0 +1,1752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Aavira by Amrit - Exquisite Punjabi suits and ethnic wear, crafted for your most beautiful moments. Order easily on WhatsApp.">
+<title>Aavira by Amrit | Boutique & Ethnic Wear</title>
+<style>
+:root{--ink:#28221f;--cream:#fbf7f1;--rose:#d7b7a7;--gold:#a77d55;--gold-dark:#8e643e;--muted:#796e66;--line:#e9ded4}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--cream);font-family:Arial,sans-serif}a{color:inherit;text-decoration:none}button{cursor:pointer;font:inherit}
+.top{background:#2d2723;color:#f9f0e8;text-align:center;padding:10px;font-size:10px;letter-spacing:.17em}
+.nav{height:78px;padding:0 6%;display:flex;align-items:center;justify-content:space-between;background:#fffdf9;position:sticky;top:0;z-index:4;border-bottom:1px solid var(--line)}
+.logo{font-family:Georgia,serif;font-size:24px;letter-spacing:.12em;cursor:pointer;user-select:none}
+.logo small{display:block;font:9px Arial,sans-serif;letter-spacing:.3em;text-align:center;margin-top:5px}
+.links{display:flex;gap:22px;font-size:12px}.links a:hover{color:var(--gold)}
+.bag{background:#2d2723;color:white;border:0;padding:12px 18px;font-size:12px;border-radius:2px;letter-spacing:.05em}
+
+/* Hero & Sections */
+.hero{min-height:520px;display:flex;align-items:center;padding:7%;color:white;background:linear-gradient(90deg,rgba(38,27,23,.75),rgba(38,27,23,.2)),url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1800&q=85') center/cover}
+.hero-inner{max-width:520px}
+.eyebrow{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#f0d9c6}
+.hero h1{font:normal clamp(40px,6vw,68px)/1.05 Georgia,serif;margin:20px 0}
+.hero p{font-size:14px;line-height:1.8;max-width:430px;color:#f8eee8}
+.cta{display:inline-block;background:#b58c69;color:white;padding:14px 24px;margin-top:14px;font-size:11px;letter-spacing:.13em;text-transform:uppercase;border:0;border-radius:2px;transition:.2s}
+.cta:hover{background:#916a4b}
+.section{padding:58px 6%}
+.heading{text-align:center;margin-bottom:28px}
+.heading small{font-size:10px;letter-spacing:.22em;color:var(--gold);text-transform:uppercase}
+.heading h2{font:normal clamp(30px,4vw,42px) Georgia,serif;margin:10px 0}
+.heading p{color:var(--muted);font-size:13px;line-height:1.7}
+
+/* Collections & Categories Cards */
+.categories{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.cat{height:300px;position:relative;overflow:hidden;background:#ddd;cursor:pointer;border-radius:3px;transition:box-shadow .3s,transform .25s}
+.cat:hover{box-shadow:0 12px 36px rgba(0,0,0,0.22);transform:translateY(-3px)}
+.cat img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.cat:hover img{transform:scale(1.06)}
+.cat:after{content:"";position:absolute;inset:40% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.80))}
+.cat div{position:absolute;bottom:20px;left:20px;color:white;z-index:1}
+.cat h3{font:normal 24px Georgia,serif;margin:0 0 4px}.cat p{font-size:11px;margin:0;color:#f3eae1}
+.cat-browse-pill{display:inline-flex;align-items:center;gap:5px;margin-top:8px;background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.4);padding:4px 12px;border-radius:20px;font-size:10px;letter-spacing:.06em;text-transform:uppercase;font-weight:bold;color:#fff;backdrop-filter:blur(4px);opacity:0;transform:translateY(6px);transition:opacity .25s,transform .25s}
+.cat:hover .cat-browse-pill{opacity:1;transform:translateY(0)}
+
+/* Product Cards */
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.product{background:#fffdfa;border:1px solid var(--line);position:relative;display:flex;flex-direction:column;border-radius:2px;overflow:hidden}
+.product img{width:100%;height:290px;object-fit:cover;background:#eee}
+.offer-badge{position:absolute;top:10px;left:10px;background:#9b3d30;color:#fff;font-size:9px;font-weight:bold;letter-spacing:.08em;padding:4px 8px;border-radius:2px;z-index:2;box-shadow:0 2px 8px rgba(0,0,0,0.25);text-transform:uppercase}
+.info{padding:14px;display:flex;flex-direction:column;flex:1}
+.info h3{font:normal 16px Georgia,serif;margin:0 0 6px}
+.info p{font-size:11px;color:var(--muted);line-height:1.5;margin:0 0 8px;flex:1}
+.sizes-tag{font-size:10px;color:var(--gold-dark);font-weight:bold;margin-bottom:8px;display:block;cursor:pointer}
+.sizes-tag:hover{text-decoration:underline}
+.price-box{display:flex;align-items:baseline;gap:8px;margin-bottom:12px}
+.price{font-size:15px;font-weight:bold;color:var(--ink)}
+.price-orig{font-size:12px;color:#8f847c;text-decoration:line-through}
+.price-save{font-size:10px;color:#2e7d32;font-weight:bold}
+.actions{display:flex;gap:7px}
+.actions button{flex:1;padding:10px 5px;font-size:10px;border:1px solid #2d2723;background:#2d2723;color:white;border-radius:2px;transition:.2s}
+.actions button:hover{background:#a77d55;border-color:#a77d55}
+.actions button.alt{background:white;color:#2d2723}
+.actions button.alt:hover{background:#f4ece4}
+
+/* DEDICATED CATEGORY PAGE STYLES */
+.cat-page-header{margin-bottom:30px}
+.cat-back-btn{display:inline-flex;align-items:center;gap:6px;background:#28221f;color:#fff;border:0;padding:10px 18px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;border-radius:2px;cursor:pointer;margin-bottom:16px;transition:.2s}
+.cat-back-btn:hover{background:#a77d55}
+.cat-breadcrumb{font-size:11px;color:var(--muted);display:flex;gap:6px;margin-bottom:14px;text-transform:uppercase;letter-spacing:.08em}
+.cat-hero-card{background:linear-gradient(135deg,#f5ebe1,#faf6f0);border:1px solid #ebd9c8;border-radius:6px;padding:32px;margin-bottom:20px}
+.cat-switcher-bar{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;padding-top:16px;border-top:1px solid #e5d5c5}
+.cat-pill{padding:7px 15px;font-size:11px;border-radius:20px;border:1px solid #d4c4b5;background:#fff;cursor:pointer;transition:.2s;font-weight:bold;color:var(--ink)}
+.cat-pill:hover{border-color:var(--gold);color:var(--gold-dark)}
+.cat-pill.active{background:#28221f;color:#fff;border-color:#28221f}
+.cat-meta-bar{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--line);margin-bottom:20px;flex-wrap:wrap;gap:10px}
+
+/* Banner & Footer */
+.banner{margin:0 6% 55px;padding:40px;background:#eee2d8;display:flex;align-items:center;justify-content:space-between;gap:25px;border-radius:2px}
+.banner h2{font:normal 32px Georgia,serif;margin:8px 0}
+.banner p{font-size:12px;line-height:1.7;color:var(--muted);max-width:520px}
+.footer{background:#2d2723;color:#f9f1e9;padding:42px 6% 22px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:25px}
+.footer h4{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#d9b99e}
+.footer p,.footer a{display:block;font-size:11px;line-height:2;color:#d5c8bf}
+.copy{grid-column:1/-1;border-top:1px solid #51443c;padding-top:17px;text-align:center;color:#b8aaa0;font-size:10px;cursor:pointer;user-select:none}
+
+/* Standard Modal Styles */
+.modal{position:fixed;inset:0;background:#0008;display:none;align-items:center;justify-content:center;padding:15px;z-index:99}
+.modal.open{display:flex}
+.panel{background:#fffaf5;padding:25px;width:100%;max-width:580px;max-height:90vh;overflow:auto;border-radius:4px}
+.paneltop{display:flex;justify-content:space-between;align-items:center}
+.paneltop h2{font:normal 24px Georgia,serif;margin:0}
+.x{border:0;background:none;font-size:24px;cursor:pointer}
+
+/* SIZE SELECTION MODAL STYLES */
+.size-modal-chips{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}
+.sm-chip{padding:12px 8px;border:1px solid #d4c4b5;background:#fff;border-radius:4px;font-size:12px;font-weight:bold;cursor:pointer;text-align:center;transition:.2s}
+.sm-chip:hover{border-color:var(--gold);color:var(--gold-dark)}
+.sm-chip.active{background:#28221f;color:#fff;border-color:#28221f;box-shadow:0 3px 10px rgba(0,0,0,0.15)}
+
+/* Cart / Bag Item Styles */
+.cart-item{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.cart-item-img{width:54px;height:66px;object-fit:cover;border-radius:4px;background:#eee}
+.cart-size-badge{display:inline-block;background:#f3eae1;color:#8e643e;padding:3px 8px;border-radius:3px;font-size:11px;font-weight:bold;margin:4px 0 2px;border:1px solid #e2d2c1}
+.cart-qty-btn{width:26px;height:26px;border:1px solid var(--line);background:#fff;border-radius:3px;cursor:pointer;font-size:14px;display:inline-flex;align-items:center;justify-content:center}
+.cart-qty-btn:hover{background:#eee}
+.cart-del-btn{border:0;background:#fee2e2;color:#991b1b;width:26px;height:26px;border-radius:3px;cursor:pointer;font-size:14px;font-weight:bold;display:inline-flex;align-items:center;justify-content:center}
+.cart-del-btn:hover{background:#fca5a5}
+
+.field{display:flex;flex-direction:column;gap:5px;margin:10px 0}
+.field label{font-size:11px;color:var(--muted);font-weight:bold}
+.field input,.field select,.field textarea{padding:10px 12px;border:1px solid var(--line);background:white;font:inherit;font-size:12px;border-radius:2px}
+.note{font-size:10px;color:var(--muted);line-height:1.6}
+
+/* DRAGGABLE OWNER SUITE WINDOW */
+.owner-backdrop{position:fixed;inset:0;pointer-events:none;z-index:9999;display:none}
+.owner-backdrop.open{display:block}
+.owner-window{pointer-events:auto;position:fixed;top:65px;right:25px;width:800px;max-width:95vw;height:620px;max-height:86vh;background:#fffdfa;border:1px solid #c5a059;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,0.35);display:flex;flex-direction:column;overflow:hidden;resize:both;min-width:320px;min-height:360px}
+.owner-window.maximized{top:10px!important;left:10px!important;right:10px!important;bottom:10px!important;width:calc(100vw - 20px)!important;height:calc(100vh - 20px)!important;max-width:none!important;max-height:none!important}
+.owner-header{background:#28221f;color:#fbf7f1;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;cursor:grab;user-select:none;border-bottom:2px solid #a77d55}
+.owner-header:active{cursor:grabbing}
+.owner-header-title{font-family:Georgia,serif;font-size:14px;letter-spacing:.04em;display:flex;align-items:center;gap:8px}
+.drag-grip{color:#c5a059;font-size:15px;letter-spacing:-2px}
+.drag-tip{font-size:10px;color:#d7b7a7;font-family:Arial,sans-serif;font-weight:normal}
+.owner-header-btns{display:flex;gap:6px}
+.win-btn{background:rgba(255,255,255,0.12);border:0;color:#fbf7f1;width:28px;height:26px;border-radius:4px;font-size:12px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:.2s}
+.win-btn:hover{background:#a77d55}
+.win-btn.close:hover{background:#b23b3b}
+
+/* Dashboard Tabs */
+.dash-tabs{display:flex;background:#f3eae1;border-bottom:1px solid var(--line);overflow-x:auto}
+.dash-tab{padding:12px 16px;font-size:11px;font-weight:bold;color:var(--muted);background:none;border:0;border-bottom:3px solid transparent;cursor:pointer;white-space:nowrap;transition:.2s}
+.dash-tab:hover{color:var(--ink)}
+.dash-tab.active{color:var(--ink);background:#fffdfa;border-bottom-color:#a77d55}
+
+/* Dashboard Content */
+.dash-content{flex:1;overflow-y:auto;padding:20px;background:#fffdfa}
+.tab-pane{display:none}
+.tab-pane.active{display:block}
+
+/* KPI Summary Metric Cards */
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px}
+.kpi-card{padding:12px;border-radius:6px;border:1px solid var(--line);background:#fff}
+.kpi-card small{font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);display:block;margin-bottom:4px}
+.kpi-card h3{margin:0 0 3px;font-size:19px;font-family:Arial,sans-serif}
+.kpi-card span{font-size:9px;color:var(--muted)}
+.kpi-card.green{border-left:4px solid #2e7d32;background:#f8fdf8}.kpi-card.green h3{color:#2e7d32}
+.kpi-card.yellow{border-left:4px solid #d97706;background:#fffdf6}.kpi-card.yellow h3{color:#d97706}
+.kpi-card.red{border-left:4px solid #b91c1c;background:#fef7f7}.kpi-card.red h3{color:#b91c1c}
+.kpi-card.blue{border-left:4px solid #2563eb;background:#f8faff}.kpi-card.blue h3{color:#2563eb}
+
+/* Orders & Payments Ledger */
+.ledger-filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.filter-btn{padding:5px 12px;font-size:10px;border-radius:20px;border:1px solid var(--line);background:#fff;cursor:pointer}
+.filter-btn.active{background:#28221f;color:#fff;border-color:#28221f}
+.order-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:12px;margin-bottom:10px;font-size:11px}
+.order-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee;padding-bottom:6px;margin-bottom:8px}
+.order-id{font-weight:bold;font-size:12px}
+.badge-status{display:inline-block;padding:3px 8px;border-radius:3px;font-size:9px;font-weight:bold;text-transform:uppercase}
+.badge-status.paid{background:#dcfce7;color:#15803d}
+.badge-status.pending{background:#fef3c7;color:#b45309}
+.badge-status.refunded{background:#fee2e2;color:#b91c1c}
+.badge-method{display:inline-block;padding:2px 7px;border-radius:3px;font-size:9px;background:#f3f4f6;color:#374151;border:1px solid #e5e7eb}
+.order-actions{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+.order-actions button{padding:5px 10px;font-size:10px;border:1px solid var(--line);background:#fff;cursor:pointer;border-radius:3px}
+.order-actions button:hover{background:#f5eee7}
+.order-actions button.btn-paid{background:#dcfce7;color:#166534;border-color:#86efac}
+.order-actions button.btn-refund{background:#fee2e2;color:#991b1b;border-color:#fca5a5}
+
+/* Offers Manager Styles */
+.offer-box{background:#fbf6ee;border:1px solid #e6d6c3;border-radius:6px;padding:15px;margin-bottom:18px}
+.offer-presets{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.offer-preset-btn{background:#fff;border:1px solid #d4c4b5;padding:5px 10px;font-size:10px;border-radius:3px;cursor:pointer}
+.offer-preset-btn:hover{background:#a77d55;color:#fff}
+.suit-offer-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.suit-offer-item{border:1px solid var(--line);border-radius:6px;padding:8px;background:#fff;display:flex;gap:8px;align-items:center;cursor:pointer;transition:.2s}
+.suit-offer-item:hover{border-color:#a77d55;box-shadow:0 3px 10px rgba(0,0,0,0.06)}
+.suit-offer-item.has-offer{border-color:#9b3d30;background:#fff8f6}
+.suit-offer-thumb{width:46px;height:46px;border-radius:4px;object-fit:cover;background:#eee}
+
+/* Mini Restore Pill Badge & Toast */
+#ownerMiniBadge{display:none;position:fixed;bottom:20px;right:20px;background:#28221f;color:#fbf7f1;padding:10px 18px;border-radius:30px;box-shadow:0 8px 25px rgba(0,0,0,0.3);z-index:10001;cursor:pointer;font-size:12px;font-weight:bold;border:1px solid #c5a059;transition:.2s}
+#ownerMiniBadge:hover{background:#3d342d;transform:translateY(-2px)}
+#cartToast{display:none;position:fixed;bottom:25px;left:50%;transform:translateX(-50%);background:#28221f;color:#fff;padding:12px 24px;border-radius:30px;font-size:12px;font-weight:bold;box-shadow:0 10px 30px rgba(0,0,0,0.3);z-index:99999;border:1px solid #c5a059}
+
+@media(max-width:850px){.products{grid-template-columns:repeat(2,1fr)}.footer{grid-template-columns:repeat(2,1fr)}.kpi-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.nav{height:68px;padding:0 4%}.logo{font-size:19px}.links{display:none}.hero h1{font-size:42px}.categories{grid-template-columns:1fr}.products{gap:10px}.product img{height:200px}.banner{display:block;padding:25px}.kpi-grid{grid-template-columns:1fr}.owner-window{top:15px;right:10px;left:10px;width:auto;height:88vh}}
+</style>
+</head>
+<body>
+
+<div class="top" id="topAnnouncement">FREE SHIPPING ACROSS INDIA &nbsp; · &nbsp; COD AVAILABLE</div>
+<header class="nav">
+  <a class="logo" href="#" onclick="triggerSecretOwnerClick(event); showHome(); return false;" title="Aavira by Amrit">
+    AAVIRA BY AMRIT<small>TRADITIONAL ELEGANCE</small>
+  </a>
+  <nav class="links">
+    <a href="index.html">Home</a>
+    <a href="category.html?cat=Punjabi+Suits">Punjabi Suits</a>
+    <a href="category.html?cat=Party+Wear">Party Wear</a>
+    <a href="category.html?cat=Cotton+Suits">Cotton Suits</a>
+    <a href="#story">Our Story</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="bag" onclick="openBag()">BAG (<span id="count">0</span>)</button>
+</header>
+
+<!-- HOMEPAGE VIEW -->
+<div id="homeView">
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="eyebrow">Timeless Elegance in Every Thread</div>
+        <h1>Authentic Punjabi Suits & Ethnic Wear.</h1>
+        <p>Discover exquisite ethnic wear crafted for your most beautiful moments and celebrations.</p>
+        <a class="cta" href="#collections">Explore Collection →</a>
+      </div>
+    </section>
+
+    <!-- DYNAMIC COLLECTIONS & CATEGORIES SECTION -->
+    <section class="section" id="collections">
+      <div class="heading">
+        <small>Handpicked Styles</small>
+        <h2>Shop by Variety</h2>
+        <p>Click any category below to browse exclusive suits in that collection.</p>
+      </div>
+      <div class="categories" id="collectionsGrid"></div>
+    </section>
+
+    <section class="section" id="new" style="background:#f4ece4">
+      <div class="heading">
+        <small>Trending This Season</small>
+        <h2>New Arrivals</h2>
+        <p>Explore our latest handcrafted styles for your ethnic wardrobe. Click 'Add to Bag' to select your size.</p>
+      </div>
+      <div class="products" id="products"></div>
+    </section>
+
+    <section class="section" id="story">
+      <div class="heading">
+        <small>The Aavira Promise</small>
+        <h2>Tradition, Tailored to You</h2>
+        <p>At Aavira by Amrit, we bring you timeless ethnic wear that celebrates tradition, craftsmanship, and your unique style. Message us on WhatsApp for custom measurements or design queries.</p>
+      </div>
+    </section>
+
+    <section class="banner">
+      <div>
+        <div class="eyebrow" style="color:#9b704e">Need Assistance?</div>
+        <h2>Your next favourite outfit awaits.</h2>
+        <p>Have questions about fabric, measurements, or matching dupattas? Send us a quick message on WhatsApp.</p>
+      </div>
+      <button class="cta" onclick="whatsapp('Hello Aavira by Amrit! I would like help choosing an outfit.')">Chat on WhatsApp →</button>
+    </section>
+  </main>
+</div>
+
+<!-- DEDICATED FULL CATEGORY / VARIETY VIEW PAGE -->
+<div id="categoryView" style="display:none; padding: 40px 6%; min-height: 80vh;">
+  <div class="cat-page-header">
+    <button class="cat-back-btn" onclick="showHome()">← Back to Home / Collections</button>
+    
+    <div class="cat-breadcrumb">
+      <span onclick="showHome()" style="cursor:pointer; text-decoration:underline;">Home</span>
+      <span>/</span>
+      <span>Collections</span>
+      <span>/</span>
+      <span id="catBreadcrumbCurrent" style="color:var(--ink); font-weight:bold;">Punjabi Suits</span>
+    </div>
+
+    <!-- Category Hero Header Card -->
+    <div class="cat-hero-card">
+      <div class="eyebrow" style="color:var(--gold-dark); margin-bottom:8px;">AAVIRA EXCLUSIVE VARIETY</div>
+      <h1 id="catTitleHeading" style="font-family:Georgia,serif; font-size:clamp(32px, 5vw, 46px); margin:0 0 10px; color:var(--ink);">Punjabi Suits</h1>
+      <p id="catSubtitleDesc" style="color:var(--muted); font-size:14px; max-width:650px; line-height:1.7; margin:0;">Browse our exclusive handcrafted collection.</p>
+      
+      <!-- Interactive Variety Switcher Bar -->
+      <div class="cat-switcher-bar">
+        <span style="font-size:11px; font-weight:bold; color:var(--muted); align-self:center;">Switch Variety:</span>
+        <div id="catPillsList" style="display:flex; gap:6px; flex-wrap:wrap;"></div>
+      </div>
+    </div>
+
+    <!-- Count & Sort Bar -->
+    <div class="cat-meta-bar">
+      <span id="catSuitCountBadge" style="font-size:12px; font-weight:bold; color:var(--ink);">Showing Outfits</span>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <label style="font-size:11px; color:var(--muted);">Sort by:</label>
+        <select id="catSortSelect" onchange="applyCategorySort(this.value)" style="padding:6px 12px; font-size:11px; border:1px solid var(--line); border-radius:3px; background:#fff;">
+          <option value="featured">Featured Collection</option>
+          <option value="low-high">Price: Low to High</option>
+          <option value="high-low">Price: High to Low</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Filtered Suits Grid (ONLY THIS CATEGORY'S SUITS) -->
+  <div class="products" id="categoryProducts"></div>
+</div>
+
+<footer class="footer" id="contact">
+  <div>
+    <div class="logo" onclick="triggerSecretOwnerClick(event)" style="cursor:pointer" title="Aavira by Amrit">
+      AAVIRA BY AMRIT<small>TRADITIONAL ELEGANCE</small>
+    </div>
+    <p>Exquisite Punjabi suits and ethnic wear for your special moments.</p>
+  </div>
+  <div>
+    <h4>Explore Varieties</h4>
+    <div id="footerCategoryLinks">
+      <a href="category.html?cat=Punjabi+Suits">Punjabi Suits</a>
+      <a href="category.html?cat=Party+Wear">Party Wear</a>
+      <a href="category.html?cat=Cotton+Suits">Cotton Suits</a>
+    </div>
+  </div>
+  <div><h4>Customer Care</h4><a href="#" onclick="alert('Free Shipping Across India & COD Available.');return false">Shipping & Policies</a><a href="#" onclick="openSizeChartModal();return false">Size & Fitting Guide</a></div>
+  <div><h4>Contact</h4><p>WhatsApp: +91 8427478723<br>Email: aavirabyamrit@gmail.com<br>India</p></div>
+  <div class="copy" onclick="triggerSecretOwnerClick(event)" title="Aavira by Amrit">© <span id="year"></span> Aavira by Amrit. All rights reserved.</div>
+</footer>
+
+<!-- SIZE SELECTION POPUP MODAL (Add to Bag Trigger) -->
+<div class="modal" id="sizeModal">
+  <div class="panel" style="max-width: 480px;">
+    <div class="paneltop">
+      <h2 style="font-size: 20px; font-family: Georgia, serif;">Select Your Size</h2>
+      <button class="x" onclick="closeSizeModal()">×</button>
+    </div>
+
+    <!-- Suit Preview in Modal -->
+    <div style="display:flex; gap:14px; align-items:center; margin:14px 0; padding-bottom:14px; border-bottom:1px solid var(--line);">
+      <img id="smSuitImg" src="" alt="" style="width:64px; height:80px; object-fit:cover; border-radius:4px; background:#eee;">
+      <div>
+        <h3 id="smSuitName" style="margin:0 0 4px; font-size:15px; font-family:Georgia, serif;">Suit Name</h3>
+        <span id="smSuitCategory" style="font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:0.05em;">Punjabi Suits</span>
+        <div style="margin-top:4px;">
+          <b id="smSuitPrice" style="font-size:16px; color:var(--ink);">₹0</b>
+          <span id="smSuitOrigPrice" style="font-size:12px; color:#888; text-decoration:line-through; margin-left:6px;"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Size Options -->
+    <div>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+        <label style="font-size:11px; font-weight:bold; text-transform:uppercase; letter-spacing:0.08em; color:var(--ink);">Choose Size:</label>
+        <span style="font-size:10px; color:var(--gold-dark); cursor:pointer; text-decoration:underline;" onclick="toggleSizeChart()">📐 View Size Chart</span>
+      </div>
+      <div class="size-modal-chips" id="smSizesList"></div>
+    </div>
+
+    <!-- Collapsible Size Chart -->
+    <div id="smSizeChart" style="display:none; margin:12px 0; padding:10px; background:#f7f2ec; border-radius:4px; font-size:10px; border:1px solid #e5d7c8;">
+      <b>Standard Indian Suit Measurements (in Inches):</b>
+      <table style="width:100%; margin-top:6px; border-collapse:collapse; text-align:left;">
+        <tr style="border-bottom:1px solid #ddd;"><th>Size</th><th>Bust</th><th>Waist</th><th>Hip</th></tr>
+        <tr><td>S</td><td>36"</td><td>32"</td><td>38"</td></tr>
+        <tr><td>M</td><td>38"</td><td>34"</td><td>40"</td></tr>
+        <tr><td>L</td><td>40"</td><td>36"</td><td>42"</td></tr>
+        <tr><td>XL</td><td>42"</td><td>38"</td><td>44"</td></tr>
+        <tr><td>XXL</td><td>44"</td><td>40"</td><td>46"</td></tr>
+      </table>
+      <div style="margin-top:6px; color:var(--muted); font-size:9px;">Custom alterations & semi-stitched options available on WhatsApp.</div>
+    </div>
+
+    <!-- Quantity Selector -->
+    <div style="display:flex; align-items:center; justify-content:space-between; margin:16px 0; padding:10px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+      <span style="font-size:11px; font-weight:bold; color:var(--muted);">Quantity:</span>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <button class="cart-qty-btn" onclick="changeModalQty(-1)" style="width:28px; height:28px;">−</button>
+        <span id="smQtyDisplay" style="font-size:14px; font-weight:bold; min-width:20px; text-align:center;">1</span>
+        <button class="cart-qty-btn" onclick="changeModalQty(1)" style="width:28px; height:28px;">+</button>
+      </div>
+    </div>
+
+    <!-- Confirm Add to Bag Button -->
+    <button class="cta" style="width:100%; padding:14px; font-size:12px; margin-top:4px;" onclick="confirmAddToCartFromModal()">
+      🛍️ Confirm & Add to Bag (<span id="smSelectedSizeText">Size: M</span>) →
+    </button>
+  </div>
+</div>
+
+<!-- Customer Bag Modal with Size Badges & Payment Method Selector -->
+<div class="modal" id="bag">
+  <div class="panel">
+    <div class="paneltop">
+      <h2>Your Bag</h2>
+      <button class="x" onclick="closeBag()">×</button>
+    </div>
+    <div id="items" style="margin: 15px 0;"></div>
+    <p style="font-size:16px; border-top: 1px solid var(--line); padding-top: 12px; margin-top: 8px;">
+      <b>Estimated Total: <span id="total">₹0</span></b>
+    </p>
+    
+    <div class="field">
+      <label>Your Name *</label>
+      <input id="name" placeholder="Full name">
+    </div>
+    <div class="field">
+      <label>Phone Number *</label>
+      <input id="phone" placeholder="Mobile / WhatsApp number">
+    </div>
+    <div class="field">
+      <label>Delivery Address *</label>
+      <input id="address" placeholder="Full delivery address with PIN code">
+    </div>
+
+    <div class="field">
+      <label>Preferred Payment Mode *</label>
+      <select id="payMethodSelect">
+        <option value="Online (UPI / QR)">📱 Online Payment (UPI / Google Pay / PhonePe / Paytm)</option>
+        <option value="Net Banking (IMPS)">🏛️ Net Banking / Bank Transfer (IMPS / NEFT)</option>
+        <option value="Cash on Delivery (COD)">💵 Cash on Delivery (COD)</option>
+      </select>
+    </div>
+
+    <p class="note">Your order with chosen sizes will be recorded in our system and sent directly to WhatsApp for instant confirmation.</p>
+    <button class="cta" style="width:100%" onclick="checkout()">Send Order Enquiry on WhatsApp →</button>
+  </div>
+</div>
+
+<!-- DRAGGABLE OWNER SUITE MODAL (FLOATING & NON-BLOCKING) -->
+<div class="owner-backdrop" id="adminModal">
+  <div class="owner-window" id="ownerWindow">
+    
+    <!-- DRAG HEADER -->
+    <div class="owner-header" id="ownerDragHeader">
+      <div class="owner-header-title">
+        <span class="drag-grip">⋮⋮</span>
+        <span>👑 <b>Aavira Owner Suite</b></span>
+        <span class="drag-tip">(Drag header to move & view website behind)</span>
+      </div>
+      <div class="owner-header-btns">
+        <button class="win-btn" onclick="minimizeOwnerWindow()" title="Minimize to floating button">—</button>
+        <button class="win-btn" onclick="toggleMaximizeOwnerWindow()" title="Maximize / Restore">⛶</button>
+        <button class="win-btn close" onclick="closeAdmin()" title="Close Dashboard">✕</button>
+      </div>
+    </div>
+
+    <!-- LOGIN VIEW -->
+    <div id="loginView" style="padding:28px;">
+      <h2 style="font-family:Georgia,serif;margin-top:0;">Owner Login</h2>
+      <p class="note">Enter your secure owner password to access the management dashboard.</p>
+      <div class="field">
+        <label>Password</label>
+        <input type="password" id="adminPassInput" placeholder="Enter password (default: amrit123)" onkeydown="if(event.key==='Enter')verifyAdmin()">
+      </div>
+      <button class="cta" style="width:100%;margin-top:10px" onclick="verifyAdmin()">Login to Dashboard →</button>
+    </div>
+
+    <!-- DASHBOARD VIEW -->
+    <div id="dashboardView" style="display:none; flex-direction:column; flex:1; overflow:hidden;">
+      
+      <!-- Tabs Navigation -->
+      <div class="dash-tabs">
+        <button class="dash-tab active" onclick="switchTab('offers')">🏷️ Offers & Discounts</button>
+        <button class="dash-tab" onclick="switchTab('categories')">📁 Categories</button>
+        <button class="dash-tab" onclick="switchTab('payments')">💳 Payments & Orders</button>
+        <button class="dash-tab" onclick="switchTab('returns')">🔄 Returns & Refunds</button>
+        <button class="dash-tab" onclick="switchTab('products')">👗 Manage Suits</button>
+        <button class="dash-tab" onclick="switchTab('settings')">⚙️ Settings</button>
+      </div>
+
+      <!-- Tab Content Area -->
+      <div class="dash-content">
+        
+        <!-- TAB 1: OFFERS & DISCOUNTS -->
+        <div id="tab-offers" class="tab-pane active">
+          <div class="offer-box">
+            <h3 style="margin-top:0;color:var(--gold-dark);font-family:Georgia,serif;">✨ Store-Wide Mega Offer (All Suits)</h3>
+            <p class="note">Apply a universal discount tag and price reduction across ALL suits in your boutique at once.</p>
+            
+            <div class="field">
+              <label>Offer Tag / Badge Text</label>
+              <input id="storeOfferTag" placeholder="e.g. Festive 20% OFF or Diwali Special">
+            </div>
+
+            <div class="offer-presets">
+              <span style="font-size:11px;color:var(--muted);align-self:center;">Quick Presets:</span>
+              <button class="offer-preset-btn" onclick="setPresetOffer('10% OFF', 10, 'percent')">10% OFF</button>
+              <button class="offer-preset-btn" onclick="setPresetOffer('15% OFF', 15, 'percent')">15% OFF</button>
+              <button class="offer-preset-btn" onclick="setPresetOffer('Festive 20% OFF', 20, 'percent')">20% OFF</button>
+              <button class="offer-preset-btn" onclick="setPresetOffer('Special 25% OFF', 25, 'percent')">25% OFF</button>
+              <button class="offer-preset-btn" onclick="setPresetOffer('Flat ₹500 OFF', 500, 'flat')">Flat ₹500 OFF</button>
+            </div>
+
+            <div style="display:flex;gap:10px;margin-top:14px;">
+              <button class="cta" onclick="applyStoreWideOffer()" style="background:#2e7d32;flex:1;">🚀 Apply Offer to All Suits</button>
+              <button class="cta" onclick="removeStoreWideOffers()" style="background:#555;">Clear All Offers</button>
+            </div>
+          </div>
+
+          <h3 style="font-family:Georgia,serif;color:var(--gold-dark);margin-bottom:8px;">🎯 Suit-by-Suit Custom Offers</h3>
+          <p class="note">Click on any suit below to set a custom sale price or offer badge specifically for that suit.</p>
+          <div class="suit-offer-grid" id="suitOfferGrid"></div>
+
+          <!-- Single Suit Offer Edit Modal/Card -->
+          <div id="singleOfferEditor" style="display:none;margin-top:20px;padding:15px;border:1px solid #c5a059;background:#fefbf6;border-radius:6px;">
+            <h4 id="editOfferSuitName" style="margin:0 0 10px;font-family:Georgia,serif;">Set Offer for Suit</h4>
+            <input type="hidden" id="editOfferSuitId">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+              <div class="field">
+                <label>Offer Badge (e.g. 25% OFF)</label>
+                <input id="singleOfferTagInput">
+              </div>
+              <div class="field">
+                <label>Offer Sale Price (₹)</label>
+                <input type="number" id="singleOfferPriceInput">
+              </div>
+            </div>
+            <div style="display:flex;gap:10px;margin-top:10px;">
+              <button class="cta" onclick="saveSingleSuitOffer()" style="padding:10px 18px;">Save Suit Offer</button>
+              <button class="cta" onclick="clearSingleSuitOffer()" style="background:#8b2b2b;padding:10px 18px;">Remove Offer</button>
+              <button class="cta" onclick="document.getElementById('singleOfferEditor').style.display='none'" style="background:#777;padding:10px 18px;">Cancel</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: CATEGORIES MANAGEMENT -->
+        <div id="tab-categories" class="tab-pane">
+          <div class="offer-box">
+            <h3 style="margin-top:0;color:var(--gold-dark);font-family:Georgia,serif;">📁 Add New Category / Collection</h3>
+            <p class="note">Aap yahan se website par nayi category add kar sakte hain (jaise Velvet Suits, Anarkali Suits, Bridal Wear, Kurti Plazo Set). Yahan add karte hi website par automatically show ho jayegi.</p>
+            
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+              <div class="field">
+                <label>Category Name *</label>
+                <input id="catNewName" placeholder="e.g. Velvet Suits / Anarkali Wear">
+              </div>
+              <div class="field">
+                <label>Subtitle / Tagline</label>
+                <input id="catNewSubtitle" placeholder="e.g. Royal winter textures & embroidery">
+              </div>
+            </div>
+            <div class="field">
+              <label>Cover Photo Image URL (Optional)</label>
+              <input id="catNewImg" placeholder="Paste image address (leave blank for auto cover)">
+            </div>
+            <button class="cta" onclick="addNewCategory()" style="margin-top:6px;background:#2e7d32;">+ Add New Category to Website</button>
+          </div>
+
+          <h3 style="font-family:Georgia,serif;color:var(--gold-dark);margin-bottom:10px;">Active Website Categories</h3>
+          <p class="note">Neeche aapki saari categories hain. Aap kisi bhi category ke suits dekh sakte hain ya category delete kar sakte hain:</p>
+          <div id="categoriesListManager" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin-top:10px;"></div>
+        </div>
+
+        <!-- TAB 3: PAYMENTS & ORDERS -->
+        <div id="tab-payments" class="tab-pane">
+          <!-- Summary KPIs -->
+          <div class="kpi-grid">
+            <div class="kpi-card green">
+              <small>Payments Received</small>
+              <h3 id="statReceived">₹0</h3>
+              <span>Online UPI & Net Banking Confirmed</span>
+            </div>
+            <div class="kpi-card yellow">
+              <small>Pending Payments</small>
+              <h3 id="statPending">₹0</h3>
+              <span>Awaiting payment / COD Pending</span>
+            </div>
+            <div class="kpi-card red">
+              <small>Refunded Payments</small>
+              <h3 id="statRefunded">₹0</h3>
+              <span>Returned products refunded</span>
+            </div>
+            <div class="kpi-card blue">
+              <small>Total Orders</small>
+              <h3 id="statOrdersCount">0</h3>
+              <span>Total customer orders</span>
+            </div>
+          </div>
+
+          <!-- Filter & Action Bar -->
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
+            <div class="ledger-filters" id="paymentFilters">
+              <button class="filter-btn active" onclick="filterOrders('all')">All Orders</button>
+              <button class="filter-btn" onclick="filterOrders('Paid')">Received / Paid</button>
+              <button class="filter-btn" onclick="filterOrders('Pending')">Pending</button>
+              <button class="filter-btn" onclick="filterOrders('Net Banking')">Net Banking</button>
+              <button class="filter-btn" onclick="filterOrders('Online')">Online (UPI)</button>
+              <button class="filter-btn" onclick="filterOrders('COD')">Cash on Delivery</button>
+            </div>
+            <button class="cta" onclick="openManualOrderModal()" style="padding:7px 14px;font-size:10px;background:#28221f;">+ Add Walk-in Order</button>
+          </div>
+
+          <!-- Manual Order Form -->
+          <div id="manualOrderBox" style="display:none;padding:14px;background:#f8f5f0;border:1px solid #dcd2c5;border-radius:6px;margin-bottom:15px;">
+            <h4 style="margin:0 0 10px;font-family:Georgia,serif;">Add Walk-in / Phone Order</h4>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+              <div class="field"><label>Customer Name</label><input id="moName" placeholder="Name"></div>
+              <div class="field"><label>Phone Number</label><input id="moPhone" placeholder="Mobile"></div>
+              <div class="field"><label>Suit Name & Size</label><input id="moItems" placeholder="e.g. Royal Maroon Suit (Size: M)"></div>
+              <div class="field"><label>Amount (₹)</label><input type="number" id="moTotal" placeholder="3499"></div>
+              <div class="field">
+                <label>Payment Mode</label>
+                <select id="moMethod">
+                  <option value="Online (UPI / QR)">Online (UPI / QR)</option>
+                  <option value="Net Banking (IMPS)">Net Banking (IMPS)</option>
+                  <option value="Cash on Delivery (COD)">Cash on Delivery (COD)</option>
+                  <option value="Cash at Store">Cash at Store</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Initial Status</label>
+                <select id="moStatus">
+                  <option value="Paid">Paid (Received)</option>
+                  <option value="Pending">Pending</option>
+                </select>
+              </div>
+            </div>
+            <div style="display:flex;gap:10px;margin-top:10px;">
+              <button class="cta" onclick="saveManualOrder()" style="padding:8px 16px;">Save Order</button>
+              <button class="cta" onclick="document.getElementById('manualOrderBox').style.display='none'" style="background:#888;padding:8px 16px;">Cancel</button>
+            </div>
+          </div>
+
+          <!-- Orders List -->
+          <div id="ordersListContainer"></div>
+        </div>
+
+        <!-- TAB 4: RETURNS & REFUNDS -->
+        <div id="tab-returns" class="tab-pane">
+          <div class="offer-box">
+            <h3 style="margin-top:0;color:#991b1b;font-family:Georgia,serif;">🔄 Returns & Refund Tracking</h3>
+            <p class="note">Manage all customer returns. When a product is returned, process the refund to update your accounts and keep clear records.</p>
+          </div>
+          <div id="returnsListContainer"></div>
+        </div>
+
+        <!-- TAB 5: MANAGE SUITS -->
+        <div id="tab-products" class="tab-pane">
+          <h3 style="margin-top:0;color:var(--gold-dark);font-family:Georgia,serif;">Add New Suit / Product</h3>
+          <div class="field"><label>Suit Name</label><input id="newTitle" placeholder="e.g. Royal Maroon Punjabi Suit"></div>
+          
+          <div class="field">
+            <label>Category (Apni pasand ki category chunein ya nayi banayein)</label>
+            <div style="display:flex;gap:8px;">
+              <select id="newCat" style="flex:1;"></select>
+              <button type="button" class="cta" onclick="promptQuickCategory()" style="padding:8px 14px;font-size:10px;background:#555;">+ New Category</button>
+            </div>
+          </div>
+
+          <div class="field"><label>Description / Fabric Details</label><input id="newDesc" placeholder="e.g. Pure Georgette with heavy thread embroidery"></div>
+          <div class="field"><label>Available Sizes (Comma separated)</label><input id="newSizes" placeholder="e.g. S, M, L, XL, XXL"></div>
+          <div class="field"><label>Price (in INR)</label><input type="number" id="newPrice" placeholder="3999"></div>
+          <div class="field"><label>Photo Image Link (URL)</label><input id="newImg" placeholder="Paste image address here"></div>
+          <button class="cta" onclick="addNewProduct()" style="margin-bottom:20px">Add Product to Website</button>
+
+          <hr style="border:0;border-top:1px solid var(--line);margin:20px 0">
+
+          <h3 style="color:var(--gold-dark);font-family:Georgia,serif;">Existing Suits in Catalog</h3>
+          <div id="manageProductList" style="max-height:240px;overflow:auto"></div>
+        </div>
+
+        <!-- TAB 6: SETTINGS -->
+        <div id="tab-settings" class="tab-pane">
+          <h3 style="margin-top:0;color:var(--gold-dark);font-family:Georgia,serif;">Website Announcement Bar</h3>
+          <div class="field"><label>Top Banner Text</label><input id="offerInput"></div>
+          <button class="cta" onclick="saveOffer()" style="margin-bottom:20px">Update Top Announcement</button>
+
+          <hr style="border:0;border-top:1px solid var(--line);margin:20px 0">
+
+          <h3 style="color:var(--gold-dark);font-family:Georgia,serif;">Change Owner Password</h3>
+          <div class="field"><label>New Password</label><input type="password" id="newPassInput" placeholder="Enter new password"></div>
+          <button class="cta" onclick="changePassword()" style="margin-bottom:20px; background:#8b5a2b;">Update Password</button>
+
+          <hr style="border:0;border-top:1px solid var(--line);margin:20px 0">
+
+          <h3 style="color:var(--gold-dark);font-family:Georgia,serif;">Sample Ledger Reset</h3>
+          <p class="note">Reload default sample categories, suits, and orders if you want a fresh start.</p>
+          <button class="cta" onclick="resetToSampleData()" style="background:#666;">Reset Sample Data</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Floating Mini Badge (shown when minimized) -->
+<div id="ownerMiniBadge" onclick="restoreOwnerWindow()">
+  👑 Aavira Owner Hub ▴ (Click to Expand)
+</div>
+
+<!-- Toast notification when item is added to cart -->
+<div id="cartToast"></div>
+
+<script>
+const WHATSAPP_NUMBER="918427478723";
+let ADMIN_PASSWORD = localStorage.getItem("aavira_pass") || "amrit123";
+
+// Initial Default Categories
+let defaultCategories=[
+  {id:1,name:"Punjabi Suits",subtitle:"Vibrant prints, delicate threadwork & traditional silhouettes",img:"https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80"},
+  {id:2,name:"Party Wear",subtitle:"Made for festive celebrations, weddings and grand occasions",img:"https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=900&q=80"},
+  {id:3,name:"Cotton Suits",subtitle:"Pure breathable cotton suits with graceful drapes for everyday elegance",img:"https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=80"}
+];
+
+// Initial Default Suits Catalog
+let defaultProducts=[
+  {id:1,name:"Lavender Bloom Suit",category:"Punjabi Suits",desc:"Handcrafted ethnic wear with delicate embroidery",sizes:"S, M, L, XL",price:3499,originalPrice:3499,offerTag:"",img:"https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=700&q=80"},
+  {id:2,name:"Royal Green Suit",category:"Party Wear",desc:"Rich tones designed for festive occasions",sizes:"M, L, XL, XXL",price:3799,originalPrice:3799,offerTag:"Festive 15% OFF",img:"https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=700&q=80"},
+  {id:3,name:"Blush Pink Cotton Suit",category:"Cotton Suits",desc:"Graceful drapes and breathable cotton",sizes:"S, M, L, XL",price:3299,originalPrice:3299,offerTag:"",img:"https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=80"},
+  {id:4,name:"Ivory Grace Suit",category:"Party Wear",desc:"Classic elegance for timeless styling",sizes:"S, M, L, XL, XXL",price:3899,originalPrice:3899,offerTag:"",img:"https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=80"}
+];
+
+// Initial Default Orders & Payments Ledger
+let defaultOrders=[
+  {
+    id: "AAV-1081",
+    date: "12 Oct 2026, 11:30 AM",
+    name: "Simran Kaur",
+    phone: "+91 98765 43210",
+    address: "Model Town, Ludhiana, Punjab - 141002",
+    items: "Lavender Bloom Suit (Size: M) × 1",
+    total: 3499,
+    paymentMethod: "Online (UPI / QR)",
+    paymentStatus: "Paid",
+    returnStatus: "None",
+    refundAmount: 0,
+    notes: "Payment received via UPI on 918427478723"
+  },
+  {
+    id: "AAV-1082",
+    date: "12 Oct 2026, 01:15 PM",
+    name: "Harpreet Dhillon",
+    phone: "+91 98123 45678",
+    address: "Sector 35, Chandigarh - 160022",
+    items: "Royal Green Suit (Size: L) × 1",
+    total: 3799,
+    paymentMethod: "Net Banking (IMPS)",
+    paymentStatus: "Pending",
+    returnStatus: "None",
+    refundAmount: 0,
+    notes: "Awaiting bank IMPS confirmation"
+  },
+  {
+    id: "AAV-1080",
+    date: "11 Oct 2026, 04:45 PM",
+    name: "Gurleen Chawla",
+    phone: "+91 98990 11223",
+    address: "Civil Lines, Amritsar, Punjab - 143001",
+    items: "Blush Pink Cotton Suit (Size: S) × 1",
+    total: 3299,
+    paymentMethod: "Online (UPI / QR)",
+    paymentStatus: "Refunded",
+    returnStatus: "Refunded",
+    refundAmount: 3299,
+    notes: "Return reason: Size exchange requested. Refund of ₹3299 processed via UPI."
+  }
+];
+
+let categories = JSON.parse(localStorage.getItem("aavira_categories")) || defaultCategories;
+let products = JSON.parse(localStorage.getItem("aavira_products")) || defaultProducts;
+products.forEach(p => {
+  if(!p.originalPrice) p.originalPrice = p.price;
+  if(p.offerTag === undefined) p.offerTag = "";
+});
+
+let orders = JSON.parse(localStorage.getItem("aavira_orders")) || defaultOrders;
+let customOffer = localStorage.getItem("aavira_offer") || "FREE SHIPPING ACROSS INDIA &nbsp; · &nbsp; COD AVAILABLE";
+document.getElementById("topAnnouncement").innerHTML = customOffer;
+
+// Cart Structure: { "1_M": { id: 1, size: "M", qty: 1 } }
+let cart = JSON.parse(localStorage.getItem("aavira_cart")) || {};
+const rupees=n=>new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR",maximumFractionDigits:0}).format(n);
+
+// Helper to parse sizes for each product
+function parseSizes(sizesStr){
+  if(!sizesStr) return ["S", "M", "L", "XL"];
+  let cleaned = sizesStr.replace(/^Sizes:\s*/i, "").trim();
+  let parts = cleaned.split(/[,/|]/).map(s => s.trim()).filter(Boolean);
+  return parts.length ? parts : ["S", "M", "L", "XL"];
+}
+
+// RENDER DYNAMIC CATEGORIES ON WEBSITE & DASHBOARD
+function openCategoryPage(catName){
+  window.location.href = 'category.html?cat=' + encodeURIComponent(catName);
+}
+
+function renderCategories(){
+  const grid = document.getElementById("collectionsGrid");
+  if(grid){
+    grid.innerHTML = categories.map(c => {
+      const count = products.filter(p => p.category === c.name).length;
+      return `
+        <div class="cat" onclick="openCategoryPage(${JSON.stringify(c.name)})" title="Browse ${c.name} Collection — click to open">
+          <img loading="lazy" src="${c.img || 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80'}" alt="${c.name}">
+          <div>
+            <h3>${c.name}</h3>
+            <p>${c.subtitle || 'Explore collection'}</p>
+            <div class="cat-browse-pill">Browse ${count > 0 ? count + ' Suits' : 'Collection'} →</div>
+          </div>
+        </div>
+      `;
+    }).join("");
+  }
+
+  updateCategoryDropdowns();
+  renderCategoriesManager();
+  renderFooterCategories();
+}
+
+function renderFooterCategories(){
+  const f = document.getElementById("footerCategoryLinks");
+  if(!f) return;
+  f.innerHTML = categories.map(c => `
+    <a href="category.html?cat=${encodeURIComponent(c.name)}">${c.name}</a>
+  `).join("");
+}
+
+function updateCategoryDropdowns(){
+  const sel = document.getElementById("newCat");
+  if(!sel) return;
+  sel.innerHTML = categories.map(c => `<option value="${c.name}">${c.name}</option>`).join("");
+}
+
+function renderCategoriesManager(){
+  const container = document.getElementById("categoriesListManager");
+  if(!container) return;
+  container.innerHTML = categories.map(c => {
+    const count = products.filter(p => p.category === c.name).length;
+    return `
+      <div style="border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff;display:flex;flex-direction:column;">
+        <img src="${c.img || 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80'}" style="width:100%;height:110px;object-fit:cover;background:#eee;">
+        <div style="padding:10px;flex:1;display:flex;flex-direction:column;justify-content:space-between;">
+          <div>
+            <b style="font-size:13px;display:block;font-family:Georgia,serif;">${c.name}</b>
+            <span style="font-size:10px;color:var(--muted);">${c.subtitle || ''}</span>
+            <div style="font-size:10px;color:var(--gold-dark);margin-top:4px;"><b>${count}</b> suits attached</div>
+          </div>
+          <div style="margin-top:10px;display:flex;gap:6px;">
+            <button onclick="window.open('category.html?cat=' + encodeURIComponent(${JSON.stringify(c.name)}), '_blank')" style="flex:1;padding:5px;font-size:9px;border:1px solid var(--line);background:#f9f9f9;border-radius:3px;cursor:pointer;">View on Site ↗</button>
+            <button onclick="deleteCategory(${c.id})" style="padding:5px 8px;font-size:9px;border:1px solid #fca5a5;background:#fee2e2;color:#991b1b;border-radius:3px;cursor:pointer;">Delete</button>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join("");
+}
+
+function addNewCategory(){
+  const name = document.getElementById("catNewName").value.trim();
+  const subtitle = document.getElementById("catNewSubtitle").value.trim();
+  let img = document.getElementById("catNewImg").value.trim();
+
+  if(!name){
+    alert("Kripya Category Name zaroor enter karein.");
+    return;
+  }
+
+  if(categories.some(c => c.name.toLowerCase() === name.toLowerCase())){
+    alert("Is naam ki category pehle se bani hui hai!");
+    return;
+  }
+
+  if(!img){
+    img = "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80";
+  }
+
+  const newId = categories.length ? Math.max(...categories.map(c => c.id)) + 1 : 1;
+  categories.push({ id: newId, name, subtitle: subtitle || "Handpicked collection", img });
+  localStorage.setItem("aavira_categories", JSON.stringify(categories));
+
+  document.getElementById("catNewName").value = "";
+  document.getElementById("catNewSubtitle").value = "";
+  document.getElementById("catNewImg").value = "";
+
+  renderCategories();
+  alert(`'${name}' category website par live add ho gayi hai!`);
+}
+
+function promptQuickCategory(){
+  const name = prompt("Nayi Category ka Naam enter karein (e.g. Velvet Suits, Anarkali):");
+  if(!name || !name.trim()) return;
+  const trimmed = name.trim();
+  if(categories.some(c => c.name.toLowerCase() === trimmed.toLowerCase())){
+    alert("Yeh category pehle se maujood hai!");
+    document.getElementById("newCat").value = trimmed;
+    return;
+  }
+  const newId = categories.length ? Math.max(...categories.map(c => c.id)) + 1 : 1;
+  categories.push({
+    id: newId,
+    name: trimmed,
+    subtitle: "Exclusive new collection",
+    img: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80"
+  });
+  localStorage.setItem("aavira_categories", JSON.stringify(categories));
+  renderCategories();
+  document.getElementById("newCat").value = trimmed;
+  alert(`'${trimmed}' category add ho gayi hai aur dropdown mein select ho chuki hai!`);
+}
+
+function deleteCategory(catId){
+  const cat = categories.find(c => c.id === catId);
+  if(!cat) return;
+  if(confirm(`Kya aap sach mein '${cat.name}' category ko delete karna chahte hain?`)){
+    categories = categories.filter(c => c.id !== catId);
+    localStorage.setItem("aavira_categories", JSON.stringify(categories));
+    renderCategories();
+  }
+}
+
+// RENDER INDIVIDUAL PRODUCT CARD
+function renderProductCard(p){
+  let hasOffer = (p.offerTag && p.offerTag.trim().length > 0) || (p.originalPrice > p.price);
+  let saveAmount = p.originalPrice > p.price ? p.originalPrice - p.price : 0;
+
+  return `
+    <article class="product">
+      ${hasOffer ? `<span class="offer-badge">${p.offerTag || 'SPECIAL OFFER'}</span>` : ''}
+      <img loading="lazy" src="${p.img}" alt="${p.name}">
+      <div class="info">
+        <h3>${p.name}</h3>
+        <p>${p.desc}</p>
+        <span class="sizes-tag" onclick="filterCategory('${p.category}')">Sizes: ${p.sizes || 'S, M, L, XL'} · <span style="color:var(--muted)">${p.category}</span></span>
+
+        <div class="price-box">
+          <span class="price">${rupees(p.price)}</span>
+          ${saveAmount > 0 ? `<span class="price-orig">${rupees(p.originalPrice)}</span><span class="price-save">Save ${rupees(saveAmount)}</span>` : ''}
+        </div>
+        <div class="actions">
+          <button onclick="openSizeModal(${p.id})">Add to Bag</button>
+          <button class="alt" onclick="whatsapp('Hello, I want to inquire about '+${JSON.stringify(p.name)}+' priced at '+${JSON.stringify(rupees(p.price))}+'. Please share size availability.')">WhatsApp</button>
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+function renderProducts(){
+  document.getElementById("products").innerHTML = products.map(renderProductCard).join("");
+}
+
+// HOMEPAGE VIEW SWITCHER
+function showHome(){
+  document.getElementById("homeView").style.display="block";
+  document.getElementById("categoryView").style.display="none";
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+// DEDICATED CATEGORY WEBPAGE NAVIGATION ("Ek alag web khula jisme sirf ousi category ka suits ho")
+let currentActiveCategory = "";
+function filterCategory(catName){
+  window.location.href = 'category.html?cat=' + encodeURIComponent(catName);
+}
+
+function renderCategoryPills(activeCat){
+  let container = document.getElementById("catPillsList");
+  if(!container) return;
+  container.innerHTML = categories.map(c => {
+    let isActive = c.name.toLowerCase() === activeCat.toLowerCase();
+    return `
+      <button type="button" class="cat-pill ${isActive ? 'active' : ''}" onclick="filterCategory(${JSON.stringify(c.name)})">
+        ${c.name}
+      </button>
+    `;
+  }).join("");
+}
+
+function applyCategorySort(sortType){
+  if(!currentActiveCategory) return;
+  let filtered = products.filter(p => p.category.toLowerCase() === currentActiveCategory.toLowerCase());
+  if(sortType === 'low-high') filtered.sort((a,b) => a.price - b.price);
+  else if(sortType === 'high-low') filtered.sort((a,b) => b.price - a.price);
+
+  document.getElementById("categoryProducts").innerHTML = filtered.map(renderProductCard).join("");
+}
+
+function whatsapp(msg){window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(msg),"_blank","noopener")}
+
+// SIZE SELECTION POPUP MODAL LOGIC
+let currentModalSuitId = null;
+let currentModalSelectedSize = null;
+let currentModalQty = 1;
+
+function openSizeModal(suitId){
+  let p = products.find(x => x.id === suitId);
+  if(!p) return;
+  currentModalSuitId = suitId;
+  currentModalQty = 1;
+  document.getElementById("smQtyDisplay").textContent = "1";
+  document.getElementById("smSuitImg").src = p.img;
+  document.getElementById("smSuitName").textContent = p.name;
+  document.getElementById("smSuitCategory").textContent = p.category;
+  document.getElementById("smSuitPrice").textContent = rupees(p.price);
+
+  let origPriceEl = document.getElementById("smSuitOrigPrice");
+  if(p.originalPrice > p.price){
+    origPriceEl.textContent = rupees(p.originalPrice);
+    origPriceEl.style.display = "inline";
+  } else {
+    origPriceEl.style.display = "none";
+  }
+
+  // Parse sizes for this suit
+  let sizes = parseSizes(p.sizes);
+  currentModalSelectedSize = sizes[0] || "M";
+  document.getElementById("smSelectedSizeText").textContent = "Size: " + currentModalSelectedSize;
+
+  let chipsHtml = sizes.map((s, idx) => `
+    <button type="button" class="sm-chip ${idx === 0 ? 'active' : ''}" onclick="selectModalSize('${s}', this)">
+      ${s}
+    </button>
+  `).join("");
+
+  // Also add Semi-Stitched / Custom Tailoring chip if not already in list
+  if(!sizes.some(s => s.toLowerCase().includes("custom") || s.toLowerCase().includes("semi"))){
+    chipsHtml += `
+      <button type="button" class="sm-chip" onclick="selectModalSize('Custom Tailoring', this)">
+        Custom Stitching
+      </button>
+    `;
+  }
+
+  document.getElementById("smSizesList").innerHTML = chipsHtml;
+  document.getElementById("smSizeChart").style.display = "none";
+  document.getElementById("sizeModal").classList.add("open");
+}
+
+function selectModalSize(size, btn){
+  currentModalSelectedSize = size;
+  document.querySelectorAll(".sm-chip").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+  document.getElementById("smSelectedSizeText").textContent = "Size: " + size;
+}
+
+function changeModalQty(delta){
+  currentModalQty = Math.max(1, currentModalQty + delta);
+  document.getElementById("smQtyDisplay").textContent = currentModalQty;
+}
+
+function toggleSizeChart(){
+  let chart = document.getElementById("smSizeChart");
+  chart.style.display = (chart.style.display === "none") ? "block" : "none";
+}
+
+function openSizeChartModal(){
+  openSizeModal(products[0]?.id || 1);
+  toggleSizeChart();
+}
+
+function closeSizeModal(){
+  document.getElementById("sizeModal").classList.remove("open");
+}
+
+function confirmAddToCartFromModal(){
+  if(!currentModalSuitId || !currentModalSelectedSize) return;
+  let p = products.find(x => x.id === currentModalSuitId);
+  if(!p) return;
+
+  let cartKey = currentModalSuitId + "_" + currentModalSelectedSize;
+  if(!cart[cartKey]){
+    cart[cartKey] = { id: currentModalSuitId, size: currentModalSelectedSize, qty: currentModalQty };
+  } else {
+    cart[cartKey].qty += currentModalQty;
+  }
+
+  saveCart();
+  updateBagCount();
+  renderBag();
+  closeSizeModal();
+  showCartToast(`✓ Added ${p.name} (Size: ${currentModalSelectedSize}, Qty: ${currentModalQty}) to Bag!`);
+  openBag();
+}
+
+// CART & CHECKOUT
+function changeQty(cartKey, delta){
+  if(!cart[cartKey]) return;
+  cart[cartKey].qty += delta;
+  if(cart[cartKey].qty <= 0){
+    delete cart[cartKey];
+  }
+  saveCart();
+  updateBagCount();
+  renderBag();
+}
+
+function removeItem(cartKey){
+  delete cart[cartKey];
+  saveCart();
+  updateBagCount();
+  renderBag();
+}
+
+function saveCart(){
+  localStorage.setItem("aavira_cart", JSON.stringify(cart));
+}
+
+function updateBagCount(){
+  let totalCount = Object.values(cart).reduce((s, item) => s + (item.qty || 0), 0);
+  document.getElementById("count").textContent = totalCount;
+}
+
+function renderBag(){
+  let entries = Object.entries(cart);
+  let container = document.getElementById("items");
+  if(!entries.length){
+    container.innerHTML = '<p style="text-align:center;padding:25px;color:var(--muted);">Your bag is currently empty.</p>';
+    document.getElementById("total").textContent = rupees(0);
+    return;
+  }
+
+  let total = 0;
+  let html = entries.map(([cartKey, item]) => {
+    let p = products.find(x => x.id === item.id);
+    if(!p) return '';
+    let itemTotal = p.price * item.qty;
+    total += itemTotal;
+    return `
+      <div class="cart-item">
+        <img src="${p.img}" alt="${p.name}" class="cart-item-img">
+        <div style="flex:1;">
+          <b style="font-size:13px;display:block;font-family:Georgia,serif;">${p.name}</b>
+          <div class="cart-size-badge">📏 <b>Size: ${item.size}</b></div>
+          <div style="font-size:12px;margin-top:2px;">
+            ${rupees(p.price)} × ${item.qty} = <b>${rupees(itemTotal)}</b>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px;">
+          <button class="cart-qty-btn" onclick="changeQty('${cartKey}', -1)" title="Decrease">−</button>
+          <span style="font-size:12px;font-weight:bold;min-width:16px;text-align:center;">${item.qty}</span>
+          <button class="cart-qty-btn" onclick="changeQty('${cartKey}', 1)" title="Increase">+</button>
+          <button class="cart-del-btn" onclick="removeItem('${cartKey}')" title="Remove Item">×</button>
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  container.innerHTML = html;
+  document.getElementById("total").textContent = rupees(total);
+}
+
+function openBag(){renderBag();document.getElementById("bag").classList.add("open")}
+function closeBag(){document.getElementById("bag").classList.remove("open")}
+
+function showCartToast(msg){
+  let t = document.getElementById("cartToast");
+  if(!t) return;
+  t.textContent = msg;
+  t.style.display = "block";
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => { t.style.display = "none"; }, 2500);
+}
+
+function checkout(){
+  let entries = Object.entries(cart);
+  if(!entries.length){alert("Your bag is empty.");return}
+  let n=document.getElementById("name").value.trim();
+  let ph=document.getElementById("phone").value.trim();
+  let ad=document.getElementById("address").value.trim();
+  let payMethod=document.getElementById("payMethodSelect").value;
+  if(!n||!ph||!ad){
+    alert("Please enter your name, phone number and delivery address.");
+    return;
+  }
+  
+  let itemsFormatted=entries.map(([cartKey, item])=>{
+    let p=products.find(x=>x.id==item.id);
+    return `• ${p.name} (Size: ${item.size}) × ${item.qty} — ${rupees(p.price * item.qty)}`;
+  }).join("\n");
+
+  let total=entries.reduce((s,[cartKey, item])=>{
+    let p=products.find(x=>x.id==item.id);
+    return s + (p ? p.price * item.qty : 0);
+  }, 0);
+
+  // AUTO-RECORD ORDER IN OWNER DASHBOARD LEDGER WITH SIZES
+  let orderId = "AAV-" + Math.floor(1000 + Math.random() * 9000);
+  let orderDate = new Date().toLocaleString("en-IN", {day:"numeric", month:"short", year:"numeric", hour:"2-digit", minute:"2-digit"});
+  let newOrder = {
+    id: orderId,
+    date: orderDate,
+    name: n,
+    phone: ph,
+    address: ad,
+    items: entries.map(([cartKey, item])=>{
+      let p=products.find(x=>x.id==item.id);
+      return `${p.name} (Size: ${item.size}) × ${item.qty}`;
+    }).join(", "),
+    total: total,
+    paymentMethod: payMethod,
+    paymentStatus: "Pending",
+    returnStatus: "None",
+    refundAmount: 0,
+    notes: `Customer selected: ${payMethod}`
+  };
+  orders.unshift(newOrder);
+  localStorage.setItem("aavira_orders", JSON.stringify(orders));
+
+  // WhatsApp Enquiry with explicit sizes
+  let waMsg = `Order enquiry — Aavira by Amrit\nOrder ID: #${orderId}\nName: ${n}\nPhone: ${ph}\nAddress: ${ad}\nPayment Preference: ${payMethod}\n\nSelected Outfits & Sizes:\n${itemsFormatted}\n\nEstimated Total: ${rupees(total)}\nPlease confirm availability and dispatch details.`;
+  whatsapp(waMsg);
+
+  cart={};
+  saveCart();
+  updateBagCount();
+  closeBag();
+}
+
+// SECRET 5-CLICK TRIGGER FOR OWNER LOGIN (Logo or Footer Copyright)
+let secretClicks = 0;
+let secretTimer = null;
+
+function triggerSecretOwnerClick(e){
+  secretClicks++;
+  clearTimeout(secretTimer);
+  secretTimer = setTimeout(() => { secretClicks = 0; }, 2500);
+
+  if(secretClicks >= 5){
+    secretClicks = 0;
+    openAdminLogin();
+  }
+}
+
+// Secret Keyboard Shortcut (Ctrl + Shift + A)
+window.addEventListener("keydown", function(e){
+  if((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "A" || e.key === "a")){
+    e.preventDefault();
+    openAdminLogin();
+  }
+});
+
+function openAdminLogin(){
+  document.getElementById("adminModal").classList.add("open");
+  document.getElementById("ownerMiniBadge").style.display="none";
+  document.getElementById("ownerWindow").style.display="flex";
+  document.getElementById("loginView").style.display="block";
+  document.getElementById("dashboardView").style.display="none";
+  document.getElementById("adminPassInput").value="";
+  setTimeout(() => {
+    const input = document.getElementById("adminPassInput");
+    if(input) input.focus();
+  }, 100);
+}
+
+function closeAdmin(){
+  document.getElementById("adminModal").classList.remove("open");
+  document.getElementById("ownerMiniBadge").style.display="none";
+}
+
+function verifyAdmin(){
+  let pass = document.getElementById("adminPassInput").value;
+  if(pass === ADMIN_PASSWORD){
+    document.getElementById("loginView").style.display="none";
+    document.getElementById("dashboardView").style.display="flex";
+    document.getElementById("offerInput").value = customOffer;
+    switchTab('offers');
+    renderCategories();
+    renderOffersTab();
+    renderPaymentsLedger();
+    renderReturnsTab();
+    renderManageList();
+  } else {
+    alert("Galat password! Dobara koshish karein.");
+  }
+}
+
+// DRAGGABLE WINDOW LOGIC
+function makeDraggable(element, handle){
+  let isDragging = false;
+  let startX, startY, initialLeft, initialTop;
+
+  handle.addEventListener("mousedown", dragStart);
+  handle.addEventListener("touchstart", dragStart, {passive: false});
+
+  function dragStart(e){
+    if(e.target.closest("button") || e.target.closest("input") || e.target.closest("select")) return;
+    if(element.classList.contains("maximized")) return;
+    isDragging = true;
+    const clientX = e.type === "touchstart" ? e.touches[0].clientX : e.clientX;
+    const clientY = e.type === "touchstart" ? e.touches[0].clientY : e.clientY;
+
+    const rect = element.getBoundingClientRect();
+    startX = clientX;
+    startY = clientY;
+    initialLeft = rect.left;
+    initialTop = rect.top;
+
+    element.style.right = "auto";
+    element.style.bottom = "auto";
+    element.style.left = initialLeft + "px";
+    element.style.top = initialTop + "px";
+
+    document.addEventListener("mousemove", dragMove);
+    document.addEventListener("mouseup", dragEnd);
+    document.addEventListener("touchmove", dragMove, {passive: false});
+    document.addEventListener("touchend", dragEnd);
+  }
+
+  function dragMove(e){
+    if(!isDragging) return;
+    if(e.type === "touchmove") e.preventDefault();
+    const clientX = e.type === "touchmove" ? e.touches[0].clientX : e.clientX;
+    const clientY = e.type === "touchmove" ? e.touches[0].clientY : e.clientY;
+    const dx = clientX - startX;
+    const dy = clientY - startY;
+
+    let newX = initialLeft + dx;
+    let newY = initialTop + dy;
+
+    newX = Math.max(10, Math.min(window.innerWidth - element.offsetWidth - 10, newX));
+    newY = Math.max(10, Math.min(window.innerHeight - 50, newY));
+
+    element.style.left = newX + "px";
+    element.style.top = newY + "px";
+  }
+
+  function dragEnd(){
+    isDragging = false;
+    document.removeEventListener("mousemove", dragMove);
+    document.removeEventListener("mouseup", dragEnd);
+    document.removeEventListener("touchmove", dragMove);
+    document.removeEventListener("touchend", dragEnd);
+  }
+}
+
+makeDraggable(document.getElementById("ownerWindow"), document.getElementById("ownerDragHeader"));
+
+// MINIMIZE & RESTORE WINDOW
+function minimizeOwnerWindow(){
+  document.getElementById("ownerWindow").style.display="none";
+  document.getElementById("ownerMiniBadge").style.display="block";
+}
+
+function restoreOwnerWindow(){
+  document.getElementById("ownerMiniBadge").style.display="none";
+  document.getElementById("ownerWindow").style.display="flex";
+}
+
+function toggleMaximizeOwnerWindow(){
+  let win = document.getElementById("ownerWindow");
+  win.classList.toggle("maximized");
+}
+
+// DASHBOARD TABS
+function switchTab(tabId){
+  document.querySelectorAll(".dash-tab").forEach(t => t.classList.remove("active"));
+  document.querySelectorAll(".tab-pane").forEach(p => p.classList.remove("active"));
+
+  const targetTab = Array.from(document.querySelectorAll(".dash-tab")).find(b => b.getAttribute("onclick").includes(tabId));
+  if(targetTab) targetTab.classList.add("active");
+
+  const pane = document.getElementById("tab-" + tabId);
+  if(pane) pane.classList.add("active");
+
+  if(tabId === 'offers') renderOffersTab();
+  if(tabId === 'categories') renderCategories();
+  if(tabId === 'payments') renderPaymentsLedger();
+  if(tabId === 'returns') renderReturnsTab();
+  if(tabId === 'products') renderManageList();
+}
+
+// OFFERS TAB LOGIC
+function renderOffersTab(){
+  let gridHtml = products.map(p => {
+    let hasOffer = (p.offerTag && p.offerTag.trim().length > 0) || (p.originalPrice > p.price);
+    return `
+      <div class="suit-offer-item ${hasOffer ? 'has-offer' : ''}" onclick="openSingleOfferEditor(${p.id})">
+        <img class="suit-offer-thumb" src="${p.img}" alt="${p.name}">
+        <div style="flex:1;overflow:hidden;">
+          <b style="display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:12px;">${p.name}</b>
+          <span style="font-size:10px;color:var(--muted);">${p.category}</span>
+          <div style="font-size:11px;margin-top:2px;">
+            <b>${rupees(p.price)}</b> ${p.originalPrice > p.price ? `<span style="text-decoration:line-through;color:#888;font-size:10px;">${rupees(p.originalPrice)}</span>` : ''}
+          </div>
+          ${hasOffer ? `<span style="display:inline-block;margin-top:3px;font-size:9px;color:#9b3d30;font-weight:bold;">🏷️ ${p.offerTag || 'Special Price'}</span>` : ''}
+        </div>
+      </div>
+    `;
+  }).join("");
+  document.getElementById("suitOfferGrid").innerHTML = gridHtml;
+}
+
+let activePreset = { tag: '20% OFF', value: 20, type: 'percent' };
+function setPresetOffer(tag, val, type){
+  activePreset = { tag, value: val, type };
+  document.getElementById("storeOfferTag").value = tag;
+}
+
+function applyStoreWideOffer(){
+  let tag = document.getElementById("storeOfferTag").value.trim() || activePreset.tag;
+  let val = activePreset.value;
+  let type = activePreset.type;
+
+  products.forEach(p => {
+    if(!p.originalPrice) p.originalPrice = p.price;
+    if(type === 'percent'){
+      p.price = Math.round(p.originalPrice * (1 - (val / 100)));
+    } else {
+      p.price = Math.max(100, p.originalPrice - val);
+    }
+    p.offerTag = tag;
+  });
+
+  localStorage.setItem("aavira_products", JSON.stringify(products));
+  renderProducts();
+  renderOffersTab();
+  alert(`Sabhi suits par '${tag}' offer successfully apply ho gaya hai! Website par live update ho chuka hai.`);
+}
+
+function removeStoreWideOffers(){
+  if(confirm("Kya aap sach mein sabhi suits ke offers hata kar normal price karna chahte hain?")){
+    products.forEach(p => {
+      if(p.originalPrice) p.price = p.originalPrice;
+      p.offerTag = "";
+    });
+    localStorage.setItem("aavira_products", JSON.stringify(products));
+    renderProducts();
+    renderOffersTab();
+    alert("Sabhi store offers hata diye gaye hain aur standard prices restore ho gaye hain!");
+  }
+}
+
+function openSingleOfferEditor(id){
+  let p = products.find(x => x.id === id);
+  if(!p) return;
+  document.getElementById("singleOfferEditor").style.display = "block";
+  document.getElementById("editOfferSuitId").value = p.id;
+  document.getElementById("editOfferSuitName").textContent = `Edit Offer: ${p.name} (Original: ${rupees(p.originalPrice || p.price)})`;
+  document.getElementById("singleOfferTagInput").value = p.offerTag || "Special Discount";
+  document.getElementById("singleOfferPriceInput").value = p.price;
+}
+
+function saveSingleSuitOffer(){
+  let id = Number(document.getElementById("editOfferSuitId").value);
+  let tag = document.getElementById("singleOfferTagInput").value.trim();
+  let newPrice = Number(document.getElementById("singleOfferPriceInput").value);
+  let p = products.find(x => x.id === id);
+  if(!p || !newPrice) return;
+
+  if(!p.originalPrice) p.originalPrice = p.price;
+  p.price = newPrice;
+  p.offerTag = tag;
+
+  localStorage.setItem("aavira_products", JSON.stringify(products));
+  renderProducts();
+  renderOffersTab();
+  document.getElementById("singleOfferEditor").style.display = "none";
+  alert(`${p.name} par offer update ho gaya hai!`);
+}
+
+function clearSingleSuitOffer(){
+  let id = Number(document.getElementById("editOfferSuitId").value);
+  let p = products.find(x => x.id === id);
+  if(!p) return;
+  if(p.originalPrice) p.price = p.originalPrice;
+  p.offerTag = "";
+
+  localStorage.setItem("aavira_products", JSON.stringify(products));
+  renderProducts();
+  renderOffersTab();
+  document.getElementById("singleOfferEditor").style.display = "none";
+  alert(`${p.name} ka offer hata diya gaya hai!`);
+}
+
+// PAYMENTS & ORDERS LEDGER LOGIC
+let currentOrderFilter = 'all';
+function filterOrders(filterType){
+  currentOrderFilter = filterType;
+  document.querySelectorAll("#paymentFilters .filter-btn").forEach(b => b.classList.remove("active"));
+  const btn = Array.from(document.querySelectorAll("#paymentFilters .filter-btn")).find(b => b.getAttribute("onclick").includes(filterType));
+  if(btn) btn.classList.add("active");
+  renderPaymentsLedger();
+}
+
+function renderPaymentsLedger(){
+  let receivedTotal = orders.filter(o => o.paymentStatus === 'Paid').reduce((s,o) => s + (o.total || 0), 0);
+  let pendingTotal = orders.filter(o => o.paymentStatus === 'Pending').reduce((s,o) => s + (o.total || 0), 0);
+  let refundedTotal = orders.reduce((s,o) => s + (o.refundAmount || 0), 0);
+  let totalOrdersCount = orders.length;
+
+  document.getElementById("statReceived").textContent = rupees(receivedTotal);
+  document.getElementById("statPending").textContent = rupees(pendingTotal);
+  document.getElementById("statRefunded").textContent = rupees(refundedTotal);
+  document.getElementById("statOrdersCount").textContent = totalOrdersCount;
+
+  let filtered = orders;
+  if(currentOrderFilter === 'Paid') filtered = orders.filter(o => o.paymentStatus === 'Paid');
+  else if(currentOrderFilter === 'Pending') filtered = orders.filter(o => o.paymentStatus === 'Pending');
+  else if(currentOrderFilter === 'Net Banking') filtered = orders.filter(o => (o.paymentMethod||'').includes('Net Banking'));
+  else if(currentOrderFilter === 'Online') filtered = orders.filter(o => (o.paymentMethod||'').includes('Online') || (o.paymentMethod||'').includes('UPI'));
+  else if(currentOrderFilter === 'COD') filtered = orders.filter(o => (o.paymentMethod||'').includes('COD'));
+
+  if(!filtered.length){
+    document.getElementById("ordersListContainer").innerHTML = `<p style="padding:15px;color:var(--muted);text-align:center;">Koi orders nahi mile.</p>`;
+    return;
+  }
+
+  let html = filtered.map(o => {
+    let statusClass = o.paymentStatus === 'Paid' ? 'paid' : (o.paymentStatus === 'Refunded' ? 'refunded' : 'pending');
+    return `
+      <div class="order-card">
+        <div class="order-head">
+          <div>
+            <span class="order-id">#${o.id}</span>
+            <span style="color:var(--muted);font-size:10px;margin-left:8px;">${o.date}</span>
+          </div>
+          <div>
+            <span class="badge-method">${o.paymentMethod || 'Online'}</span>
+            <span class="badge-status ${statusClass}" style="margin-left:4px;">${o.paymentStatus}</span>
+          </div>
+        </div>
+
+        <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+          <div>
+            <b>${o.name}</b> · <a href="https://wa.me/${o.phone.replace(/[^0-9]/g,'')}" target="_blank" style="color:var(--gold-dark);text-decoration:underline;">${o.phone}</a>
+            <div style="color:var(--muted);font-size:10px;margin-top:2px;">📍 ${o.address}</div>
+          </div>
+          <div style="text-align:right;">
+            <b style="font-size:14px;color:var(--ink);">${rupees(o.total)}</b>
+            ${o.refundAmount > 0 ? `<div style="color:#b91c1c;font-size:10px;font-weight:bold;">Refunded: ${rupees(o.refundAmount)}</div>` : ''}
+          </div>
+        </div>
+
+        <div style="background:#fcfbf8;padding:6px 10px;border-radius:4px;margin:8px 0;font-size:10px;color:var(--muted);">
+          <b>Items & Sizes:</b> ${o.items}
+          ${o.notes ? `<br><b>Note:</b> ${o.notes}` : ''}
+        </div>
+
+        <div class="order-actions">
+          <button class="btn-paid" onclick="toggleOrderStatus('${o.id}')">
+            ${o.paymentStatus === 'Paid' ? 'Mark as Pending' : '✓ Mark as Paid (Received)'}
+          </button>
+          <button class="btn-refund" onclick="processReturnRefund('${o.id}')">
+            ↩️ Process Return & Refund
+          </button>
+          <button onclick="deleteOrder('${o.id}')" style="color:#888;">Delete</button>
+        </div>
+      </div>
+    `;
+  }).join("");
+  document.getElementById("ordersListContainer").innerHTML = html;
+}
+
+function toggleOrderStatus(orderId){
+  let o = orders.find(x => x.id === orderId);
+  if(!o) return;
+  o.paymentStatus = (o.paymentStatus === 'Paid') ? 'Pending' : 'Paid';
+  localStorage.setItem("aavira_orders", JSON.stringify(orders));
+  renderPaymentsLedger();
+  renderReturnsTab();
+}
+
+function processReturnRefund(orderId){
+  let o = orders.find(x => x.id === orderId);
+  if(!o) return;
+  let defaultAmount = o.refundAmount > 0 ? o.refundAmount : o.total;
+  let amt = prompt(`Return & Refund Processing for Order #${o.id}\nCustomer: ${o.name}\nTotal: ₹${o.total}\n\nEnter refund amount in ₹:`, defaultAmount);
+  if(amt === null) return;
+  amt = Number(amt) || 0;
+
+  let reason = prompt("Enter Return Reason (e.g. Size mismatch, Customer choice, Alteration):", "Customer return");
+  if(reason === null) return;
+
+  o.returnStatus = "Refunded";
+  o.paymentStatus = "Refunded";
+  o.refundAmount = amt;
+  o.notes = `Return Reason: ${reason}. Refund of ₹${amt} processed.`;
+
+  localStorage.setItem("aavira_orders", JSON.stringify(orders));
+  renderPaymentsLedger();
+  renderReturnsTab();
+  alert(`Order #${o.id} ke liye ₹${amt} ka refund successfully record kar diya gaya hai!`);
+}
+
+function deleteOrder(orderId){
+  if(confirm(`Kya aap sach mein Order #${orderId} ko delete karna chahte hain?`)){
+    orders = orders.filter(x => x.id !== orderId);
+    localStorage.setItem("aavira_orders", JSON.stringify(orders));
+    renderPaymentsLedger();
+    renderReturnsTab();
+  }
+}
+
+function openManualOrderModal(){
+  document.getElementById("manualOrderBox").style.display = "block";
+}
+
+function saveManualOrder(){
+  let name = document.getElementById("moName").value.trim();
+  let phone = document.getElementById("moPhone").value.trim();
+  let items = document.getElementById("moItems").value.trim();
+  let total = Number(document.getElementById("moTotal").value);
+  let paymentMethod = document.getElementById("moMethod").value;
+  let paymentStatus = document.getElementById("moStatus").value;
+
+  if(!name || !total || !items){
+    alert("Kripya Customer Name, Items aur Amount zaroor bharein.");
+    return;
+  }
+
+  let orderId = "AAV-" + Math.floor(1000 + Math.random() * 9000);
+  let orderDate = new Date().toLocaleString("en-IN", {day:"numeric", month:"short", year:"numeric", hour:"2-digit", minute:"2-digit"});
+
+  orders.unshift({
+    id: orderId,
+    date: orderDate,
+    name: name,
+    phone: phone || "Walk-in Customer",
+    address: "Walk-in Store Purchase",
+    items: items,
+    total: total,
+    paymentMethod: paymentMethod,
+    paymentStatus: paymentStatus,
+    returnStatus: "None",
+    refundAmount: 0,
+    notes: "Manual entry added by boutique owner."
+  });
+
+  localStorage.setItem("aavira_orders", JSON.stringify(orders));
+  document.getElementById("manualOrderBox").style.display = "none";
+  document.getElementById("moName").value = "";
+  document.getElementById("moPhone").value = "";
+  document.getElementById("moItems").value = "";
+  document.getElementById("moTotal").value = "";
+  renderPaymentsLedger();
+  alert("Naya order successfully record ho gaya hai!");
+}
+
+// RETURNS TAB LOGIC
+function renderReturnsTab(){
+  let returnedOrders = orders.filter(o => o.returnStatus === 'Refunded' || o.paymentStatus === 'Refunded');
+  if(!returnedOrders.length){
+    document.getElementById("returnsListContainer").innerHTML = `<p style="padding:20px;text-align:center;color:var(--muted);">Filhal koi returned products nahi hain. Jab kisi order par Return process kiya jayega to wo yahan dikhega.</p>`;
+    return;
+  }
+  let html = returnedOrders.map(o => `
+    <div class="order-card" style="border-left:4px solid #b91c1c;">
+      <div class="order-head">
+        <div>
+          <span class="order-id">#${o.id}</span>
+          <span style="color:var(--muted);font-size:10px;margin-left:8px;">${o.date}</span>
+        </div>
+        <span class="badge-status refunded">REFUNDED: ${rupees(o.refundAmount || o.total)}</span>
+      </div>
+      <div>
+        <b>Customer:</b> ${o.name} (${o.phone})<br>
+        <b>Returned Outfit:</b> ${o.items}<br>
+        <b>Original Order Total:</b> ${rupees(o.total)} | <b>Refunded:</b> ${rupees(o.refundAmount || o.total)}<br>
+        <span style="color:#b91c1c;"><b>Return Reason & Notes:</b> ${o.notes || 'Customer return processed.'}</span>
+      </div>
+    </div>
+  `).join("");
+  document.getElementById("returnsListContainer").innerHTML = html;
+}
+
+// SETTINGS & PRODUCTS LOGIC
+function saveOffer(){
+  customOffer = document.getElementById("offerInput").value;
+  localStorage.setItem("aavira_offer", customOffer);
+  document.getElementById("topAnnouncement").innerHTML = customOffer;
+  alert("Offer banner update ho gaya hai!");
+}
+
+function changePassword(){
+  let newP = document.getElementById("newPassInput").value.trim();
+  if(!newP){ alert("Kripya valid password dalein."); return; }
+  ADMIN_PASSWORD = newP;
+  localStorage.setItem("aavira_pass", newP);
+  document.getElementById("newPassInput").value = "";
+  alert("Password safalpurvak badal diya gaya hai!");
+}
+
+function addNewProduct(){
+  let name = document.getElementById("newTitle").value.trim();
+  let category = document.getElementById("newCat").value;
+  let desc = document.getElementById("newDesc").value.trim();
+  let sizes = document.getElementById("newSizes").value.trim() || "S, M, L, XL";
+  let price = Number(document.getElementById("newPrice").value);
+  let img = document.getElementById("newImg").value.trim();
+
+  if(!name || !price || !img){
+    alert("Kripya Suit Name, Price aur Image URL zaroor bharein.");
+    return;
+  }
+
+  let newId = products.length ? Math.max(...products.map(p=>p.id)) + 1 : 1;
+  products.push({id: newId, name, category, desc, sizes, price, originalPrice: price, offerTag: "", img});
+  localStorage.setItem("aavira_products", JSON.stringify(products));
+  
+  renderProducts();
+  renderManageList();
+  renderOffersTab();
+  renderCategories();
+  
+  document.getElementById("newTitle").value="";
+  document.getElementById("newDesc").value="";
+  document.getElementById("newSizes").value="";
+  document.getElementById("newPrice").value="";
+  document.getElementById("newImg").value="";
+  alert("Naya suit website par live add ho gaya hai!");
+}
+
+function renderManageList(){
+  let listHtml = products.map(p=>`
+    <div class="item">
+      <span><b>${p.name}</b> (${p.category}) [Sizes: ${p.sizes || 'Standard'}] — ${rupees(p.price)}</span>
+      <button onclick="deleteProduct(${p.id})">Delete</button>
+    </div>
+  `).join("");
+  document.getElementById("manageProductList").innerHTML = listHtml || "<p>Koi product nahi mila.</p>";
+}
+
+function deleteProduct(id){
+  if(confirm("Kya aap sach mein is suit ko delete karna chahte hain?")){
+    products = products.filter(p=>p.id !== id);
+    localStorage.setItem("aavira_products", JSON.stringify(products));
+    renderProducts();
+    renderManageList();
+    renderOffersTab();
+    renderCategories();
+  }
+}
+
+function resetToSampleData(){
+  if(confirm("Kya aap default sample categories, suits aur orders restore karna chahte hain?")){
+    localStorage.removeItem("aavira_products");
+    localStorage.removeItem("aavira_orders");
+    localStorage.removeItem("aavira_categories");
+    localStorage.removeItem("aavira_cart");
+    categories = defaultCategories;
+    products = defaultProducts;
+    orders = defaultOrders;
+    cart = {};
+    updateBagCount();
+    renderCategories();
+    renderProducts();
+    renderOffersTab();
+    renderPaymentsLedger();
+    renderReturnsTab();
+    renderManageList();
+    alert("Sample data restore ho gaya hai!");
+  }
+}
+
+// Initial Initialization
+renderCategories();
+renderProducts();
+updateBagCount();
+document.getElementById("year").textContent=new Date().getFullYear();
+document.getElementById("bag").addEventListener("click",e=>{if(e.target.id==="bag")closeBag()});
+document.getElementById("sizeModal").addEventListener("click",e=>{if(e.target.id==="sizeModal")closeSizeModal()});
+
+// Handle URL parameters (e.g. ?cat=Punjabi+Suits or ?owner=1)
+const urlParams = new URLSearchParams(window.location.search);
+if(urlParams.get("cat")){
+  window.location.replace("category.html?cat=" + encodeURIComponent(urlParams.get("cat")));
+}
+if(urlParams.get("owner") === "1"){
+  setTimeout(openAdminLogin, 350);
+}
+</script>
+</body>
+</html>
