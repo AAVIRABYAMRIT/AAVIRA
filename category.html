@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Aavira by Amrit - Explore our exclusive collection of authentic Punjabi suits and ethnic wear. Order on WhatsApp.">
+<title id="pageTitle">Collection | Aavira by Amrit</title>
+<style>
+:root{--ink:#28221f;--cream:#fbf7f1;--rose:#d7b7a7;--gold:#a77d55;--gold-dark:#8e643e;--muted:#796e66;--line:#e9ded4}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--cream);font-family:Arial,sans-serif}a{color:inherit;text-decoration:none}button{cursor:pointer;font:inherit}
+.top{background:#2d2723;color:#f9f0e8;text-align:center;padding:10px;font-size:10px;letter-spacing:.17em}
+.nav{height:78px;padding:0 6%;display:flex;align-items:center;justify-content:space-between;background:#fffdf9;position:sticky;top:0;z-index:4;border-bottom:1px solid var(--line)}
+.logo{font-family:Georgia,serif;font-size:24px;letter-spacing:.12em;cursor:pointer;user-select:none}
+.logo small{display:block;font:9px Arial,sans-serif;letter-spacing:.3em;text-align:center;margin-top:5px}
+.links{display:flex;gap:22px;font-size:12px}.links a:hover{color:var(--gold)}
+.bag{background:#2d2723;color:white;border:0;padding:12px 18px;font-size:12px;border-radius:2px;letter-spacing:.05em}
+
+/* Category Page Hero & Layout */
+.cat-container{padding:35px 6% 60px;min-height:80vh}
+.cat-back-btn{display:inline-flex;align-items:center;gap:6px;background:#28221f;color:#fff;border:0;padding:10px 18px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;border-radius:2px;cursor:pointer;margin-bottom:18px;transition:.2s}
+.cat-back-btn:hover{background:#a77d55}
+.cat-breadcrumb{font-size:11px;color:var(--muted);display:flex;gap:6px;margin-bottom:16px;text-transform:uppercase;letter-spacing:.08em}
+.cat-hero-card{background:linear-gradient(135deg,#f4ebd9,#faf6f0);border:1px solid #ebd6be;border-radius:6px;padding:36px;margin-bottom:24px;position:relative}
+.eyebrow{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:8px}
+.cat-hero-card h1{font-family:Georgia,serif;font-size:clamp(32px,5vw,46px);margin:0 0 10px;color:var(--ink)}
+.cat-hero-card p{color:var(--muted);font-size:14px;max-width:650px;line-height:1.7;margin:0}
+
+/* Sticky Variety Switcher Bar */
+.variety-bar{position:sticky;top:78px;z-index:3;background:rgba(255,253,249,0.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:9px 6%;box-shadow:0 3px 14px rgba(40,34,31,0.04);transition:.2s}
+.variety-bar-inner{display:flex;align-items:center;gap:12px;overflow-x:auto;scrollbar-width:none}
+.variety-bar-inner::-webkit-scrollbar{display:none}
+.variety-bar-label{font-size:11px;font-weight:bold;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-dark);white-space:nowrap}
+.variety-pills-scroll{display:flex;align-items:center;gap:8px}
+.v-pill{display:inline-flex;align-items:center;gap:6px;padding:7px 16px;font-size:12px;font-weight:bold;border-radius:20px;border:1px solid #dccdc0;background:#ffffff;color:var(--ink);cursor:pointer;white-space:nowrap;transition:all .2s ease;user-select:none}
+.v-pill:hover{border-color:var(--gold);color:var(--gold-dark);background:#fdfaf6;transform:translateY(-1px)}
+.v-pill.active{background:#28221f;color:#ffffff;border-color:#28221f;box-shadow:0 3px 10px rgba(40,34,31,0.22)}
+.v-pill .v-count{font-size:10px;padding:1px 6px;border-radius:10px;background:rgba(0,0,0,0.06)}
+.v-pill.active .v-count{background:rgba(255,255,255,0.25);color:#fff}
+
+/* Variety Switcher in Hero Card */
+.cat-switcher-bar{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px;padding-top:18px;border-top:1px solid #e3d2be}
+.cat-pill{padding:8px 16px;font-size:11px;border-radius:20px;border:1px solid #d4c4b5;background:#fff;cursor:pointer;transition:.2s;font-weight:bold;color:var(--ink)}
+.cat-pill:hover{border-color:var(--gold);color:var(--gold-dark)}
+.cat-pill.active{background:#28221f;color:#fff;border-color:#28221f}
+
+/* Bottom Variety Quick Jump Banner */
+.variety-jump-banner{margin-top:45px;padding:26px 30px;background:linear-gradient(135deg,#f8f1e7,#fffdfa);border:1px solid #ebd9c8;border-radius:6px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.variety-jump-buttons{display:flex;gap:10px;flex-wrap:wrap}
+.v-jump-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;font-size:12px;font-weight:bold;border-radius:4px;border:1px solid var(--ink);background:#28221f;color:#fff;cursor:pointer;transition:.2s}
+.v-jump-btn:hover{background:var(--gold);border-color:var(--gold)}
+
+/* Meta Bar & Sort */
+.cat-meta-bar{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);margin-bottom:24px;flex-wrap:wrap;gap:10px}
+
+/* Product Cards */
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.product{background:#fffdfa;border:1px solid var(--line);position:relative;display:flex;flex-direction:column;border-radius:2px;overflow:hidden}
+.product img{width:100%;height:290px;object-fit:cover;background:#eee}
+.offer-badge{position:absolute;top:10px;left:10px;background:#9b3d30;color:#fff;font-size:9px;font-weight:bold;letter-spacing:.08em;padding:4px 8px;border-radius:2px;z-index:2;box-shadow:0 2px 8px rgba(0,0,0,0.25);text-transform:uppercase}
+.info{padding:14px;display:flex;flex-direction:column;flex:1}
+.info h3{font:normal 16px Georgia,serif;margin:0 0 6px}
+.info p{font-size:11px;color:var(--muted);line-height:1.5;margin:0 0 8px;flex:1}
+.sizes-tag{font-size:10px;color:var(--gold-dark);font-weight:bold;margin-bottom:8px;display:block}
+.price-box{display:flex;align-items:baseline;gap:8px;margin-bottom:12px}
+.price{font-size:15px;font-weight:bold;color:var(--ink)}
+.price-orig{font-size:12px;color:#8f847c;text-decoration:line-through}
+.price-save{font-size:10px;color:#2e7d32;font-weight:bold}
+.actions{display:flex;gap:7px}
+.actions button{flex:1;padding:10px 5px;font-size:10px;border:1px solid #2d2723;background:#2d2723;color:white;border-radius:2px;transition:.2s}
+.actions button:hover{background:#a77d55;border-color:#a77d55}
+.actions button.alt{background:white;color:#2d2723}
+.actions button.alt:hover{background:#f4ece4}
+
+/* Size Modal & Bag Modal */
+.modal{position:fixed;inset:0;background:#0008;display:none;align-items:center;justify-content:center;padding:15px;z-index:99}
+.modal.open{display:flex}
+.panel{background:#fffaf5;padding:25px;width:100%;max-width:580px;max-height:90vh;overflow:auto;border-radius:4px}
+.paneltop{display:flex;justify-content:space-between;align-items:center}
+.paneltop h2{font:normal 24px Georgia,serif;margin:0}
+.x{border:0;background:none;font-size:24px;cursor:pointer}
+
+.size-modal-chips{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}
+.sm-chip{padding:12px 8px;border:1px solid #d4c4b5;background:#fff;border-radius:4px;font-size:12px;font-weight:bold;cursor:pointer;text-align:center;transition:.2s}
+.sm-chip:hover{border-color:var(--gold);color:var(--gold-dark)}
+.sm-chip.active{background:#28221f;color:#fff;border-color:#28221f;box-shadow:0 3px 10px rgba(0,0,0,0.15)}
+
+.cart-item{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.cart-item-img{width:54px;height:66px;object-fit:cover;border-radius:4px;background:#eee}
+.cart-size-badge{display:inline-block;background:#f3eae1;color:#8e643e;padding:3px 8px;border-radius:3px;font-size:11px;font-weight:bold;margin:4px 0 2px;border:1px solid #e2d2c1}
+.cart-qty-btn{width:26px;height:26px;border:1px solid var(--line);background:#fff;border-radius:3px;cursor:pointer;font-size:14px;display:inline-flex;align-items:center;justify-content:center}
+.cart-qty-btn:hover{background:#eee}
+.cart-del-btn{border:0;background:#fee2e2;color:#991b1b;width:26px;height:26px;border-radius:3px;cursor:pointer;font-size:14px;font-weight:bold;display:inline-flex;align-items:center;justify-content:center}
+.cart-del-btn:hover{background:#fca5a5}
+
+.field{display:flex;flex-direction:column;gap:5px;margin:10px 0}
+.field label{font-size:11px;color:var(--muted);font-weight:bold}
+.field input,.field select,.field textarea{padding:10px 12px;border:1px solid var(--line);background:white;font:inherit;font-size:12px;border-radius:2px}
+.note{font-size:10px;color:var(--muted);line-height:1.6}
+.cta{display:inline-block;background:#b58c69;color:white;padding:14px 24px;margin-top:14px;font-size:11px;letter-spacing:.13em;text-transform:uppercase;border:0;border-radius:2px;transition:.2s}
+.cta:hover{background:#916a4b}
+
+.footer{background:#2d2723;color:#f9f1e9;padding:42px 6% 22px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:25px}
+.footer h4{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#d9b99e}
+.footer p,.footer a{display:block;font-size:11px;line-height:2;color:#d5c8bf}
+.copy{grid-column:1/-1;border-top:1px solid #51443c;padding-top:17px;text-align:center;color:#b8aaa0;font-size:10px}
+#cartToast{display:none;position:fixed;bottom:25px;left:50%;transform:translateX(-50%);background:#28221f;color:#fff;padding:12px 24px;border-radius:30px;font-size:12px;font-weight:bold;box-shadow:0 10px 30px rgba(0,0,0,0.3);z-index:99999;border:1px solid #c5a059}
+
+@media(max-width:850px){.products{grid-template-columns:repeat(2,1fr)}.footer{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.nav{height:68px;padding:0 4%}.logo{font-size:19px}.links{display:none}.products{gap:10px}.product img{height:200px}.cat-hero-card{padding:22px}}
+</style>
+</head>
+<body>
+
+<div class="top" id="topAnnouncement">FREE SHIPPING ACROSS INDIA &nbsp; · &nbsp; COD AVAILABLE</div>
+<header class="nav">
+  <a class="logo" href="index.html" onclick="triggerSecretOwnerClick(event)" title="Aavira by Amrit">
+    AAVIRA BY AMRIT<small>TRADITIONAL ELEGANCE</small>
+  </a>
+  <nav class="links" id="navCatLinks">
+    <a href="index.html">Home</a>
+    <a href="category.html?cat=Punjabi+Suits">Punjabi Suits</a>
+    <a href="category.html?cat=Party+Wear">Party Wear</a>
+    <a href="category.html?cat=Cotton+Suits">Cotton Suits</a>
+    <a href="index.html#story">Our Story</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="bag" onclick="openBag()">BAG (<span id="count">0</span>)</button>
+</header>
+
+<!-- STICKY VARIETY QUICK SWITCHER BAR (Easily Jump Between Varieties) -->
+<div class="variety-bar" id="varietyStickyBar">
+  <div class="variety-bar-inner">
+    <span class="variety-bar-label">✨ Switch Variety:</span>
+    <div class="variety-pills-scroll" id="stickyVarietyPills"></div>
+  </div>
+</div>
+
+<!-- MAIN DEDICATED CATEGORY VIEW -->
+<main class="cat-container">
+  <button class="cat-back-btn" onclick="window.location.href='index.html'">← Back to Home / All Collections</button>
+  
+  <div class="cat-breadcrumb">
+    <a href="index.html" style="text-decoration:underline;">Home</a>
+    <span>/</span>
+    <span>Collections</span>
+    <span>/</span>
+    <span id="catBreadcrumbText" style="color:var(--ink);font-weight:bold;">Punjabi Suits</span>
+  </div>
+
+  <!-- Hero Header Card for this Category -->
+  <div class="cat-hero-card">
+    <div class="eyebrow">AAVIRA BOUTIQUE · EXCLUSIVE VARIETY</div>
+    <h1 id="catMainTitle">Punjabi Suits</h1>
+    <p id="catMainDesc">Explore our exclusive handcrafted collection.</p>
+    
+    <!-- Quick Variety Switcher Buttons -->
+    <div class="cat-switcher-bar">
+      <span style="font-size:11px;font-weight:bold;color:var(--muted);align-self:center;">Switch Variety:</span>
+      <div id="catSwitcherPills" style="display:flex;gap:6px;flex-wrap:wrap;"></div>
+    </div>
+  </div>
+
+  <!-- Sorting & Count Meta Bar -->
+  <div class="cat-meta-bar">
+    <span id="catSuitCount" style="font-size:12px;font-weight:bold;color:var(--ink);">Loading suits...</span>
+    <div style="display:flex;align-items:center;gap:8px;">
+      <label style="font-size:11px;color:var(--muted);">Sort by:</label>
+      <select id="catSort" onchange="sortCategorySuits(this.value)" style="padding:6px 12px;font-size:11px;border:1px solid var(--line);border-radius:3px;background:#fff;">
+        <option value="featured">Featured Collection</option>
+        <option value="low-high">Price: Low to High</option>
+        <option value="high-low">Price: High to Low</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Suits Grid (ONLY THIS CATEGORY) -->
+  <div class="products" id="categoryProductsGrid"></div>
+
+  <!-- QUICK VARIETY JUMP BOTTOM BANNER -->
+  <div class="variety-jump-banner">
+    <div>
+      <small style="text-transform:uppercase;letter-spacing:0.18em;color:var(--gold-dark);font-size:10px;font-weight:bold;">✨ Switch Collection</small>
+      <h3 style="font-family:Georgia,serif;font-size:20px;margin:4px 0 6px;">Looking for other styles?</h3>
+      <p style="font-size:12px;color:var(--muted);margin:0;">Easily explore other handcrafted ethnic suit varieties with a single click:</p>
+    </div>
+    <div class="variety-jump-buttons" id="bottomVarietyButtons"></div>
+  </div>
+</main>
+
+<footer class="footer" id="contact">
+  <div>
+    <div class="logo">AAVIRA BY AMRIT<small>TRADITIONAL ELEGANCE</small></div>
+    <p>Exquisite Punjabi suits and ethnic wear for your special moments.</p>
+  </div>
+  <div>
+    <h4>Explore Varieties</h4>
+    <div id="footerCatList">
+      <a href="category.html?cat=Punjabi+Suits">Punjabi Suits</a>
+      <a href="category.html?cat=Party+Wear">Party Wear</a>
+      <a href="category.html?cat=Cotton+Suits">Cotton Suits</a>
+    </div>
+  </div>
+  <div><h4>Customer Care</h4><a href="#" onclick="alert('Free Shipping Across India & COD Available.');return false">Shipping & Policies</a><a href="#" onclick="alert('Please contact us on WhatsApp for size guides and fit assistance.');return false">Size Guide</a></div>
+  <div><h4>Contact</h4><p>WhatsApp: +91 8427478723<br>Email: aavirabyamrit@gmail.com<br>India</p></div>
+  <div class="copy" onclick="triggerSecretOwnerClick(event)" title="Aavira by Amrit">© <span id="year"></span> Aavira by Amrit. All rights reserved.</div>
+</footer>
+
+<!-- SIZE SELECTION POPUP MODAL (Add to Bag Trigger) -->
+<div class="modal" id="sizeModal">
+  <div class="panel" style="max-width: 480px;">
+    <div class="paneltop">
+      <h2 style="font-size: 20px; font-family: Georgia, serif;">Select Your Size</h2>
+      <button class="x" onclick="closeSizeModal()">×</button>
+    </div>
+
+    <!-- Suit Preview in Modal -->
+    <div style="display:flex; gap:14px; align-items:center; margin:14px 0; padding-bottom:14px; border-bottom:1px solid var(--line);">
+      <img id="smSuitImg" src="" alt="" style="width:64px; height:80px; object-fit:cover; border-radius:4px; background:#eee;">
+      <div>
+        <h3 id="smSuitName" style="margin:0 0 4px; font-size:15px; font-family:Georgia, serif;">Suit Name</h3>
+        <span id="smSuitCategory" style="font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:0.05em;">Punjabi Suits</span>
+        <div style="margin-top:4px;">
+          <b id="smSuitPrice" style="font-size:16px; color:var(--ink);">₹0</b>
+          <span id="smSuitOrigPrice" style="font-size:12px; color:#888; text-decoration:line-through; margin-left:6px;"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Size Options -->
+    <div>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+        <label style="font-size:11px; font-weight:bold; text-transform:uppercase; letter-spacing:0.08em; color:var(--ink);">Choose Size:</label>
+        <span style="font-size:10px; color:var(--gold-dark); cursor:pointer; text-decoration:underline;" onclick="toggleSizeChart()">📐 View Size Chart</span>
+      </div>
+      <div class="size-modal-chips" id="smSizesList"></div>
+    </div>
+
+    <!-- Collapsible Size Chart -->
+    <div id="smSizeChart" style="display:none; margin:12px 0; padding:10px; background:#f7f2ec; border-radius:4px; font-size:10px; border:1px solid #e5d7c8;">
+      <b>Standard Indian Suit Measurements (in Inches):</b>
+      <table style="width:100%; margin-top:6px; border-collapse:collapse; text-align:left;">
+        <tr style="border-bottom:1px solid #ddd;"><th>Size</th><th>Bust</th><th>Waist</th><th>Hip</th></tr>
+        <tr><td>S</td><td>36"</td><td>32"</td><td>38"</td></tr>
+        <tr><td>M</td><td>38"</td><td>34"</td><td>40"</td></tr>
+        <tr><td>L</td><td>40"</td><td>36"</td><td>42"</td></tr>
+        <tr><td>XL</td><td>42"</td><td>38"</td><td>44"</td></tr>
+        <tr><td>XXL</td><td>44"</td><td>40"</td><td>46"</td></tr>
+      </table>
+      <div style="margin-top:6px; color:var(--muted); font-size:9px;">Custom alterations & semi-stitched options available on WhatsApp.</div>
+    </div>
+
+    <!-- Quantity Selector -->
+    <div style="display:flex; align-items:center; justify-content:space-between; margin:16px 0; padding:10px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+      <span style="font-size:11px; font-weight:bold; color:var(--muted);">Quantity:</span>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <button class="cart-qty-btn" onclick="changeModalQty(-1)" style="width:28px; height:28px;">−</button>
+        <span id="smQtyDisplay" style="font-size:14px; font-weight:bold; min-width:20px; text-align:center;">1</span>
+        <button class="cart-qty-btn" onclick="changeModalQty(1)" style="width:28px; height:28px;">+</button>
+      </div>
+    </div>
+
+    <!-- Confirm Add to Bag Button -->
+    <button class="cta" style="width:100%; padding:14px; font-size:12px; margin-top:4px;" onclick="confirmAddToCartFromModal()">
+      🛍️ Confirm & Add to Bag (<span id="smSelectedSizeText">Size: M</span>) →
+    </button>
+  </div>
+</div>
+
+<!-- Customer Bag Modal with Size Badges & Payment Method Selector -->
+<div class="modal" id="bag">
+  <div class="panel">
+    <div class="paneltop">
+      <h2>Your Bag</h2>
+      <button class="x" onclick="closeBag()">×</button>
+    </div>
+    <div id="items" style="margin: 15px 0;"></div>
+    <p style="font-size:16px; border-top: 1px solid var(--line); padding-top: 12px; margin-top: 8px;">
+      <b>Estimated Total: <span id="total">₹0</span></b>
+    </p>
+    
+    <div class="field">
+      <label>Your Name *</label>
+      <input id="name" placeholder="Full name">
+    </div>
+    <div class="field">
+      <label>Phone Number *</label>
+      <input id="phone" placeholder="Mobile / WhatsApp number">
+    </div>
+    <div class="field">
+      <label>Delivery Address *</label>
+      <input id="address" placeholder="Full delivery address with PIN code">
+    </div>
+
+    <div class="field">
+      <label>Preferred Payment Mode *</label>
+      <select id="payMethodSelect">
+        <option value="Online (UPI / QR)">📱 Online Payment (UPI / Google Pay / PhonePe / Paytm)</option>
+        <option value="Net Banking (IMPS)">🏛️ Net Banking / Bank Transfer (IMPS / NEFT)</option>
+        <option value="Cash on Delivery (COD)">💵 Cash on Delivery (COD)</option>
+      </select>
+    </div>
+
+    <p class="note">Your order with chosen sizes will be recorded in our system and sent directly to WhatsApp for instant confirmation.</p>
+    <button class="cta" style="width:100%" onclick="checkout()">Send Order Enquiry on WhatsApp →</button>
+  </div>
+</div>
+
+<div id="cartToast"></div>
+
+<script>
+const WHATSAPP_NUMBER="918427478723";
+
+let defaultCategories=[
+  {id:1,name:"Punjabi Suits",subtitle:"Vibrant prints, delicate threadwork & traditional silhouettes",img:"https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80"},
+  {id:2,name:"Party Wear",subtitle:"Made for festive celebrations, weddings and grand occasions",img:"https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=900&q=80"},
+  {id:3,name:"Cotton Suits",subtitle:"Pure breathable cotton suits with graceful drapes for everyday elegance",img:"https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=80"}
+];
+
+let defaultProducts=[
+  {id:1,name:"Lavender Bloom Suit",category:"Punjabi Suits",desc:"Handcrafted ethnic wear with delicate embroidery",sizes:"S, M, L, XL",price:3499,originalPrice:3499,offerTag:"",img:"https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=700&q=80"},
+  {id:2,name:"Royal Green Suit",category:"Party Wear",desc:"Rich tones designed for festive occasions",sizes:"M, L, XL, XXL",price:3799,originalPrice:3799,offerTag:"Festive 15% OFF",img:"https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=700&q=80"},
+  {id:3,name:"Blush Pink Cotton Suit",category:"Cotton Suits",desc:"Graceful drapes and breathable cotton",sizes:"S, M, L, XL",price:3299,originalPrice:3299,offerTag:"",img:"https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=80"},
+  {id:4,name:"Ivory Grace Suit",category:"Party Wear",desc:"Classic elegance for timeless styling",sizes:"S, M, L, XL, XXL",price:3899,originalPrice:3899,offerTag:"",img:"https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=80"}
+];
+
+let categories = JSON.parse(localStorage.getItem("aavira_categories")) || defaultCategories;
+let products = JSON.parse(localStorage.getItem("aavira_products")) || defaultProducts;
+let customOffer = localStorage.getItem("aavira_offer") || "FREE SHIPPING ACROSS INDIA &nbsp; · &nbsp; COD AVAILABLE";
+document.getElementById("topAnnouncement").innerHTML = customOffer;
+
+let cart = JSON.parse(localStorage.getItem("aavira_cart")) || {};
+const rupees=n=>new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR",maximumFractionDigits:0}).format(n);
+
+function parseSizes(sizesStr){
+  if(!sizesStr) return ["S", "M", "L", "XL"];
+  let cleaned = sizesStr.replace(/^Sizes:\s*/i, "").trim();
+  let parts = cleaned.split(/[,/|]/).map(s => s.trim()).filter(Boolean);
+  return parts.length ? parts : ["S", "M", "L", "XL"];
+}
+
+// GET CATEGORY FROM URL
+const urlParams = new URLSearchParams(window.location.search);
+let activeCategoryName = urlParams.get("cat") || "Punjabi Suits";
+
+function loadCategoryPage(catName){
+  activeCategoryName = catName;
+  document.getElementById("pageTitle").textContent = `${catName} Collection | Aavira by Amrit`;
+  document.getElementById("catBreadcrumbText").textContent = catName;
+  document.getElementById("catMainTitle").textContent = catName;
+
+  let catObj = categories.find(c => c.name.toLowerCase() === catName.toLowerCase());
+  let desc = catObj && catObj.subtitle ? catObj.subtitle : `Browse our exclusive handcrafted collection of ${catName.toLowerCase()}.`;
+  document.getElementById("catMainDesc").textContent = desc;
+
+  // 1. Render Sticky Variety Switcher Pills (Always visible at top while scrolling)
+  const stickyContainer = document.getElementById("stickyVarietyPills");
+  if(stickyContainer){
+    stickyContainer.innerHTML = categories.map(c => {
+      let isActive = c.name.toLowerCase() === catName.toLowerCase();
+      let count = products.filter(p => p.category.toLowerCase() === c.name.toLowerCase()).length;
+      return `
+        <button type="button" class="v-pill ${isActive ? 'active' : ''}" onclick="switchCategoryDirect(${JSON.stringify(c.name)})" title="Switch to ${c.name}">
+          <span>${c.name}</span>
+          <span class="v-count">${count}</span>
+        </button>
+      `;
+    }).join("");
+  }
+
+  // 2. Render Hero Card Variety Switcher Pills
+  const heroContainer = document.getElementById("catSwitcherPills");
+  if(heroContainer){
+    heroContainer.innerHTML = categories.map(c => {
+      let isActive = c.name.toLowerCase() === catName.toLowerCase();
+      return `
+        <button type="button" class="cat-pill ${isActive ? 'active' : ''}" onclick="switchCategoryDirect(${JSON.stringify(c.name)})" title="Switch to ${c.name}">
+          ${c.name}
+        </button>
+      `;
+    }).join("");
+  }
+
+  // 3. Render Bottom Quick Jump Buttons
+  const bottomContainer = document.getElementById("bottomVarietyButtons");
+  if(bottomContainer){
+    bottomContainer.innerHTML = categories.map(c => {
+      let isActive = c.name.toLowerCase() === catName.toLowerCase();
+      return `
+        <button type="button" class="v-jump-btn" style="${isActive ? 'background:var(--gold);border-color:var(--gold);' : ''}" onclick="switchCategoryDirect(${JSON.stringify(c.name)})">
+          ${c.name} ${isActive ? '✓ (Current)' : '→'}
+        </button>
+      `;
+    }).join("");
+  }
+
+  renderNavCategories();
+  renderFooterCategories();
+
+  // 4. Filter ONLY this category's suits
+  renderCategoryGrid();
+}
+
+function renderNavCategories(){
+  const nav = document.getElementById("navCatLinks");
+  if(!nav) return;
+  nav.innerHTML = `
+    <a href="index.html">Home</a>
+    ${categories.map(c => `<a href="category.html?cat=${encodeURIComponent(c.name)}" onclick="switchCategoryDirect(${JSON.stringify(c.name)}); return false;" style="${c.name.toLowerCase() === activeCategoryName.toLowerCase() ? 'color:var(--gold);font-weight:bold;' : ''}">${c.name}</a>`).join("")}
+    <a href="index.html#story">Our Story</a>
+    <a href="#contact">Contact</a>
+  `;
+}
+
+function renderFooterCategories(){
+  const f = document.getElementById("footerCatList");
+  if(!f) return;
+  f.innerHTML = categories.map(c => `
+    <a href="category.html?cat=${encodeURIComponent(c.name)}" onclick="switchCategoryDirect(${JSON.stringify(c.name)}); return false;">${c.name}</a>
+  `).join("");
+}
+
+function switchCategoryDirect(newCatName){
+  // Instant 1-click variety switch with smooth animation
+  const newUrl = window.location.pathname + '?cat=' + encodeURIComponent(newCatName);
+  window.history.pushState({cat: newCatName}, '', newUrl);
+  loadCategoryPage(newCatName);
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function renderCategoryGrid(){
+  let filtered = products.filter(p => p.category.toLowerCase() === activeCategoryName.toLowerCase());
+  
+  let sortType = document.getElementById("catSort").value;
+  if(sortType === 'low-high') filtered.sort((a,b) => a.price - b.price);
+  else if(sortType === 'high-low') filtered.sort((a,b) => b.price - a.price);
+
+  document.getElementById("catSuitCount").textContent = `Showing ${filtered.length} Exclusive Outfit${filtered.length === 1 ? '' : 's'}`;
+
+  if(!filtered.length){
+    document.getElementById("categoryProductsGrid").innerHTML = `
+      <div style="grid-column:1/-1;text-align:center;padding:60px 20px;background:#fffdfa;border:1px solid var(--line);border-radius:6px;">
+        <h3 style="font-family:Georgia,serif;font-size:22px;margin:0 0 8px;">New Designs Coming Soon</h3>
+        <p style="color:var(--muted);font-size:13px;max-width:480px;margin:0 auto 18px;line-height:1.6;">
+          We are currently crafting more exclusive designs for our ${activeCategoryName} collection. Message us directly on WhatsApp to order customized suits in this variety.
+        </p>
+        <button class="cta" onclick="whatsapp('Hello Aavira by Amrit! I want to inquire about custom ${activeCategoryName} suits.')">Inquire on WhatsApp →</button>
+      </div>
+    `;
+    return;
+  }
+
+  document.getElementById("categoryProductsGrid").innerHTML = filtered.map(p => {
+    let hasOffer = (p.offerTag && p.offerTag.trim().length > 0) || (p.originalPrice > p.price);
+    let saveAmount = p.originalPrice > p.price ? p.originalPrice - p.price : 0;
+    return `
+      <article class="product">
+        ${hasOffer ? `<span class="offer-badge">${p.offerTag || 'SPECIAL OFFER'}</span>` : ''}
+        <img loading="lazy" src="${p.img}" alt="${p.name}">
+        <div class="info">
+          <h3>${p.name}</h3>
+          <p>${p.desc}</p>
+          <span class="sizes-tag">Sizes: ${p.sizes || 'S, M, L, XL'} · <span style="cursor:pointer;color:var(--gold-dark);text-decoration:underline;" onclick="switchCategoryDirect(${JSON.stringify(p.category)})" title="View all ${p.category}">${p.category}</span></span>
+          <div class="price-box">
+            <span class="price">${rupees(p.price)}</span>
+            ${saveAmount > 0 ? `<span class="price-orig">${rupees(p.originalPrice)}</span><span class="price-save">Save ${rupees(saveAmount)}</span>` : ''}
+          </div>
+          <div class="actions">
+            <button onclick="openSizeModal(${p.id})">Add to Bag</button>
+            <button class="alt" onclick="whatsapp('Hello, I am interested in '+${JSON.stringify(p.name)}+' from the '+${JSON.stringify(p.category)}+' collection.')">WhatsApp</button>
+          </div>
+        </div>
+      </article>
+    `;
+  }).join("");
+}
+
+function sortCategorySuits(){
+  renderCategoryGrid();
+}
+
+function whatsapp(msg){window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(msg),"_blank","noopener")}
+
+// SIZE POPUP MODAL
+let currentModalSuitId = null;
+let currentModalSelectedSize = null;
+let currentModalQty = 1;
+
+function openSizeModal(suitId){
+  let p = products.find(x => x.id === suitId);
+  if(!p) return;
+  currentModalSuitId = suitId;
+  currentModalQty = 1;
+  document.getElementById("smQtyDisplay").textContent = "1";
+  document.getElementById("smSuitImg").src = p.img;
+  document.getElementById("smSuitName").textContent = p.name;
+  document.getElementById("smSuitCategory").textContent = p.category;
+  document.getElementById("smSuitPrice").textContent = rupees(p.price);
+
+  let origPriceEl = document.getElementById("smSuitOrigPrice");
+  if(p.originalPrice > p.price){
+    origPriceEl.textContent = rupees(p.originalPrice);
+    origPriceEl.style.display = "inline";
+  } else {
+    origPriceEl.style.display = "none";
+  }
+
+  let sizes = parseSizes(p.sizes);
+  currentModalSelectedSize = sizes[0] || "M";
+  document.getElementById("smSelectedSizeText").textContent = "Size: " + currentModalSelectedSize;
+
+  let chipsHtml = sizes.map((s, idx) => `
+    <button type="button" class="sm-chip ${idx === 0 ? 'active' : ''}" onclick="selectModalSize('${s}', this)">
+      ${s}
+    </button>
+  `).join("");
+
+  if(!sizes.some(s => s.toLowerCase().includes("custom") || s.toLowerCase().includes("semi"))){
+    chipsHtml += `
+      <button type="button" class="sm-chip" onclick="selectModalSize('Custom Tailoring', this)">
+        Custom Stitching
+      </button>
+    `;
+  }
+
+  document.getElementById("smSizesList").innerHTML = chipsHtml;
+  document.getElementById("smSizeChart").style.display = "none";
+  document.getElementById("sizeModal").classList.add("open");
+}
+
+function selectModalSize(size, btn){
+  currentModalSelectedSize = size;
+  document.querySelectorAll(".sm-chip").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+  document.getElementById("smSelectedSizeText").textContent = "Size: " + size;
+}
+
+function changeModalQty(delta){
+  currentModalQty = Math.max(1, currentModalQty + delta);
+  document.getElementById("smQtyDisplay").textContent = currentModalQty;
+}
+
+function toggleSizeChart(){
+  let chart = document.getElementById("smSizeChart");
+  chart.style.display = (chart.style.display === "none") ? "block" : "none";
+}
+
+function closeSizeModal(){
+  document.getElementById("sizeModal").classList.remove("open");
+}
+
+function confirmAddToCartFromModal(){
+  if(!currentModalSuitId || !currentModalSelectedSize) return;
+  let p = products.find(x => x.id === currentModalSuitId);
+  if(!p) return;
+
+  let cartKey = currentModalSuitId + "_" + currentModalSelectedSize;
+  if(!cart[cartKey]){
+    cart[cartKey] = { id: currentModalSuitId, size: currentModalSelectedSize, qty: currentModalQty };
+  } else {
+    cart[cartKey].qty += currentModalQty;
+  }
+
+  saveCart();
+  updateBagCount();
+  renderBag();
+  closeSizeModal();
+  showCartToast(`✓ Added ${p.name} (Size: ${currentModalSelectedSize}, Qty: ${currentModalQty}) to Bag!`);
+  openBag();
+}
+
+// CART & CHECKOUT
+function changeQty(cartKey, delta){
+  if(!cart[cartKey]) return;
+  cart[cartKey].qty += delta;
+  if(cart[cartKey].qty <= 0){
+    delete cart[cartKey];
+  }
+  saveCart();
+  updateBagCount();
+  renderBag();
+}
+
+function removeItem(cartKey){
+  delete cart[cartKey];
+  saveCart();
+  updateBagCount();
+  renderBag();
+}
+
+function saveCart(){
+  localStorage.setItem("aavira_cart", JSON.stringify(cart));
+}
+
+function updateBagCount(){
+  let totalCount = Object.values(cart).reduce((s, item) => s + (item.qty || 0), 0);
+  document.getElementById("count").textContent = totalCount;
+}
+
+function renderBag(){
+  let entries = Object.entries(cart);
+  let container = document.getElementById("items");
+  if(!entries.length){
+    container.innerHTML = '<p style="text-align:center;padding:25px;color:var(--muted);">Your bag is currently empty.</p>';
+    document.getElementById("total").textContent = rupees(0);
+    return;
+  }
+
+  let total = 0;
+  let html = entries.map(([cartKey, item]) => {
+    let p = products.find(x => x.id === item.id);
+    if(!p) return '';
+    let itemTotal = p.price * item.qty;
+    total += itemTotal;
+    return `
+      <div class="cart-item">
+        <img src="${p.img}" alt="${p.name}" class="cart-item-img">
+        <div style="flex:1;">
+          <b style="font-size:13px;display:block;font-family:Georgia,serif;">${p.name}</b>
+          <div class="cart-size-badge">📏 <b>Size: ${item.size}</b></div>
+          <div style="font-size:12px;margin-top:2px;">
+            ${rupees(p.price)} × ${item.qty} = <b>${rupees(itemTotal)}</b>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px;">
+          <button class="cart-qty-btn" onclick="changeQty('${cartKey}', -1)" title="Decrease">−</button>
+          <span style="font-size:12px;font-weight:bold;min-width:16px;text-align:center;">${item.qty}</span>
+          <button class="cart-qty-btn" onclick="changeQty('${cartKey}', 1)" title="Increase">+</button>
+          <button class="cart-del-btn" onclick="removeItem('${cartKey}')" title="Remove Item">×</button>
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  container.innerHTML = html;
+  document.getElementById("total").textContent = rupees(total);
+}
+
+function openBag(){renderBag();document.getElementById("bag").classList.add("open")}
+function closeBag(){document.getElementById("bag").classList.remove("open")}
+
+function showCartToast(msg){
+  let t = document.getElementById("cartToast");
+  if(!t) return;
+  t.textContent = msg;
+  t.style.display = "block";
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => { t.style.display = "none"; }, 2500);
+}
+
+function checkout(){
+  let entries = Object.entries(cart);
+  if(!entries.length){alert("Your bag is empty.");return}
+  let n=document.getElementById("name").value.trim();
+  let ph=document.getElementById("phone").value.trim();
+  let ad=document.getElementById("address").value.trim();
+  let payMethod=document.getElementById("payMethodSelect").value;
+  if(!n||!ph||!ad){
+    alert("Please enter your name, phone number and delivery address.");
+    return;
+  }
+  
+  let itemsFormatted=entries.map(([cartKey, item])=>{
+    let p=products.find(x=>x.id==item.id);
+    return `• ${p.name} (Size: ${item.size}) × ${item.qty} — ${rupees(p.price * item.qty)}`;
+  }).join("\n");
+
+  let total=entries.reduce((s,[cartKey, item])=>{
+    let p=products.find(x=>x.id==item.id);
+    return s + (p ? p.price * item.qty : 0);
+  }, 0);
+
+  let orders = JSON.parse(localStorage.getItem("aavira_orders")) || [];
+  let orderId = "AAV-" + Math.floor(1000 + Math.random() * 9000);
+  let orderDate = new Date().toLocaleString("en-IN", {day:"numeric", month:"short", year:"numeric", hour:"2-digit", minute:"2-digit"});
+  let newOrder = {
+    id: orderId,
+    date: orderDate,
+    name: n,
+    phone: ph,
+    address: ad,
+    items: entries.map(([cartKey, item])=>{
+      let p=products.find(x=>x.id==item.id);
+      return `${p.name} (Size: ${item.size}) × ${item.qty}`;
+    }).join(", "),
+    total: total,
+    paymentMethod: payMethod,
+    paymentStatus: "Pending",
+    returnStatus: "None",
+    refundAmount: 0,
+    notes: `Customer selected: ${payMethod}`
+  };
+  orders.unshift(newOrder);
+  localStorage.setItem("aavira_orders", JSON.stringify(orders));
+
+  let waMsg = `Order enquiry — Aavira by Amrit\nOrder ID: #${orderId}\nName: ${n}\nPhone: ${ph}\nAddress: ${ad}\nPayment Preference: ${payMethod}\n\nSelected Outfits & Sizes:\n${itemsFormatted}\n\nEstimated Total: ${rupees(total)}\nPlease confirm availability and dispatch details.`;
+  whatsapp(waMsg);
+
+  cart={};
+  saveCart();
+  updateBagCount();
+  closeBag();
+}
+
+// Initialize on Load
+loadCategoryPage(activeCategoryName);
+updateBagCount();
+document.getElementById("year").textContent=new Date().getFullYear();
+document.getElementById("bag").addEventListener("click",e=>{if(e.target.id==="bag")closeBag()});
+document.getElementById("sizeModal").addEventListener("click",e=>{if(e.target.id==="sizeModal")closeSizeModal()});
+
+// Handle browser Back/Forward history
+window.addEventListener('popstate', () => {
+  const params = new URLSearchParams(window.location.search);
+  const cat = params.get("cat") || "Punjabi Suits";
+  loadCategoryPage(cat);
+});
+
+// Secret 5-Click Trigger for Owner Suite from Category Page (redirects to index.html with owner dashboard open)
+let secretClicks = 0;
+let secretTimer = null;
+function triggerSecretOwnerClick(e){
+  secretClicks++;
+  clearTimeout(secretTimer);
+  secretTimer = setTimeout(() => { secretClicks = 0; }, 2500);
+  if(secretClicks >= 5){
+    secretClicks = 0;
+    window.location.href = "index.html?owner=1";
+  }
+}
+window.addEventListener("keydown", function(e){
+  if((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "A" || e.key === "a")){
+    e.preventDefault();
+    window.location.href = "index.html?owner=1";
+  }
+});
+</script>
+</body>
+</html>
